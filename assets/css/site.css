@@ -84,14 +84,15 @@ button { font: inherit; color: inherit; }
 }
 
 /* ---------- hero ---------- */
-.hero { position: relative; height: 330vh; background: var(--night); color: var(--night-ink); }
+.hero { position: relative; height: 420vh; background: var(--night); color: var(--night-ink); }
 .stage { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden;
   background: var(--night); }
 .stage canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity .9s ease; }
-.stage.is-live canvas { opacity: 1; }
+.stage.is-live canvas { opacity: var(--reel, 0); transition: none; }
 .poster { position: absolute; right: 2%; top: 50%; width: min(58vw, 980px); transform: translateY(-46%); opacity: .95; transition: opacity .6s ease; pointer-events: none; }
 .stage.is-live .poster { opacity: 0; }
-.no-webgl .poster { opacity: 1; }
+.stage:not(.is-live) .poster { opacity: 0; }
+.no-webgl .poster { opacity: 0; }
 @media (max-aspect-ratio: 9/10) { .poster { right: auto; left: 50%; top: 32%; width: 108vw; transform: translate(-50%, -50%); } }
 
 .intro { position: absolute; inset: auto var(--gutter) clamp(28px, 6vh, 64px) var(--gutter); display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: 28px 56px; align-items: end;
@@ -131,7 +132,7 @@ button { font: inherit; color: inherit; }
 .parts-copy { position: absolute; inset-inline-start: var(--gutter); bottom: clamp(28px, 6vh, 64px); max-width: 30ch; display: grid; gap: 14px; opacity: var(--parts, 0); transform: translateY(calc((1 - var(--parts, 0)) * 20px)); }
 .parts-copy h2 { font-size: clamp(1.9rem, 3.4vw, 3.1rem); line-height: 1; letter-spacing: -.04em; }
 .parts-copy p { color: #c9c3b6; }
-.scrollhint { position: absolute; inset-inline-end: var(--gutter); bottom: clamp(28px, 6vh, 64px); display: flex; align-items: center; gap: 12px; font-size: .82rem; color: var(--night-muted); opacity: var(--intro, 1); }
+.scrollhint { z-index: 3; position: absolute; inset-inline-end: var(--gutter); bottom: clamp(28px, 6vh, 64px); display: flex; align-items: center; gap: 12px; font-size: .82rem; color: var(--night-muted); opacity: var(--intro, 1); }
 .scrollhint .bar { width: 60px; height: 1px; background: var(--night-line); position: relative; overflow: hidden; }
 .scrollhint .bar::after { content: ""; position: absolute; inset: 0; background: var(--night-ink); transform-origin: left; transform: scaleX(calc(var(--progress, 0) * 1.0 + .08)); }
 @media (max-width: 860px) { .scrollhint { display: none; } }
@@ -503,7 +504,8 @@ table.spec td.num { font-size: 1.05rem; }
     linear-gradient(270deg, rgba(10,17,12,.9) 0%, rgba(10,17,12,.62) 38%, rgba(10,17,12,.28) 70%, rgba(10,17,12,.45) 100%),
     linear-gradient(180deg, rgba(10,17,12,.55) 0%, rgba(10,17,12,0) 26%, rgba(10,17,12,0) 58%, rgba(10,17,12,.9) 100%); }
 /* the backdrop recedes as the reel comes apart, so the parts read clearly */
-.hero-bg { opacity: calc(1 - var(--parts, 0) * .55); transition: opacity .2s linear; }
+.hero-bg { opacity: calc(1 - var(--reel, 0) * .78); }
+.hero-bg .show-item.is-on img { animation-duration: 12s; }
 .stage .poster, .stage canvas, .stage .kicker, .stage .intro, .stage .callout, .stage .parts-copy, .stage .scrollhint { z-index: 3; }
 .stage canvas { filter: drop-shadow(0 30px 60px rgba(0,0,0,.45)); }
 @media (max-aspect-ratio: 9/10) {

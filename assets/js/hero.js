@@ -79,21 +79,25 @@ function init() {
   function frame(now) {
     const t = (now - t0) / 1000;
     const p = reduce ? 0 : progress;
-    const e = ramp(p, 0.14, 0.52) - ramp(p, 0.84, 1.0);
+    // timeline: images + headline → images dim, reel arrives → reel comes apart → reassembles
+    const reelIn = ramp(p, 0.13, 0.3);
+    const e = ramp(p, 0.34, 0.64) - ramp(p, 0.88, 1.0);
     explodeReel(reel, e);
     const sway = reduce ? 0 : Math.sin(t * 0.35) * 0.045;
-    holder.rotation.y = lerp(-0.6, -1.05, ramp(p, 0.08, 0.5)) + sway;
-    holder.rotation.x = lerp(0, 0.06, ramp(p, 0.1, 0.5));
-    const dist = lerp(mobile ? 9.6 : 6.7, mobile ? 12.4 : 7.3, ramp(p, 0.1, 0.5));
-    const elev = lerp(1.3, 1.75, ramp(p, 0.1, 0.5));
+    holder.rotation.y = lerp(-0.25, -0.6, reelIn) + lerp(0, -0.45, ramp(p, 0.3, 0.62)) + sway;
+    holder.rotation.x = lerp(0, 0.06, ramp(p, 0.3, 0.62));
+    holder.position.y = 0.8 - (1 - reelIn) * 0.35;
+    const dist = lerp(mobile ? 9.6 : 6.7, mobile ? 12.4 : 7.3, ramp(p, 0.3, 0.62)) + (1 - reelIn) * 2.2;
+    const elev = lerp(1.3, 1.75, ramp(p, 0.3, 0.62));
     cam.position.set(0, elev, dist);
     cam.lookAt(target);
     renderer.render(scene, cam);
 
     // HTML layers driven by the same timeline
-    stage.style.setProperty("--intro", String(1 - ramp(p, 0.06, 0.2)));
-    stage.style.setProperty("--parts", String(ramp(p, 0.38, 0.5) - ramp(p, 0.8, 0.88)));
-    stage.style.setProperty("--outro", String(ramp(p, 0.86, 0.95)));
+    stage.style.setProperty("--intro", String(1 - ramp(p, 0.08, 0.2)));
+    stage.style.setProperty("--reel", String(reelIn));
+    stage.style.setProperty("--parts", String(ramp(p, 0.52, 0.62) - ramp(p, 0.84, 0.9)));
+    stage.style.setProperty("--outro", String(ramp(p, 0.88, 0.96)));
     stage.style.setProperty("--progress", String(p));
 
     const c = holder.getWorldPosition(tmp).project(cam);
