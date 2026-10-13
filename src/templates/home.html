@@ -1,12 +1,13 @@
 {% extends "base.html" %}
-{% from "_macros.html" import card, show, rfq_form, sectors_block with context %}
+{% from "_macros.html" import card, show, rfq_form, sectors_block, hero_flow, timeline, pillars with context %}
 {% block head %}
-<link rel="preload" as="image" href="{{ root }}assets/img/render-makara.webp">
+<link rel="preload" as="image" href="{{ asset(S.hero_images[0].src) }}">
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.min.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"}}</script>
 {% endblock %}
 {% block main %}
 <section class="hero" data-hero>
   <div class="stage" data-stage>
+    {{ hero_flow() }}
     <img class="poster" src="{{ root }}assets/img/render-makara.webp" alt="" aria-hidden="true" width="1600" height="1200">
     <canvas aria-label="{{ L.hero.canvas_label }}"></canvas>
     <div class="kicker"><span><b>{{ L.hero.kicker }}</b></span><span>{{ L.hero.place }}</span></div>
@@ -75,16 +76,35 @@
   </div>
 </section>
 
-<section class="sec px about-teaser" id="kurumsal">
-  <div class="at-grid">
-    {{ show('show-tall') }}
-    <div class="at-copy">
-      <p class="eyebrow" style="padding:0">{{ L.home.about_eyebrow }}</p>
-      <h2>{{ L.home.about_h }}</h2>
-      <div class="story">{% for s in L.about.story[:2] %}<p>{{ s }}</p>{% endfor %}</div>
-      <div class="facts facts-3">{% for f in L.about.facts_fixed %}<div class="fact"><strong>{{ f[0] }}</strong><span>{{ f[1] }}</span></div>{% endfor %}</div>
-      <div><a class="btn btn-ink" href="{{ link(about_path) }}"><span>{{ L.home.about_more }}</span> <i>{{ L.arrow }}</i></a></div>
+<section class="sec px heritage" id="kurumsal">
+  <div class="her-grid">
+    <div class="her-year">
+      <p class="eyebrow">{{ L.heritage.eyebrow }}</p>
+      <strong class="num" aria-hidden="true">{{ S.company.heritage_year }}</strong>
+      <span>{{ L.heritage.year_caption }}</span>
     </div>
+    <div class="her-copy">
+      <h2>{{ L.heritage.h }}</h2>
+      <div class="story">{% for s in L.heritage.story %}<p>{{ s }}</p>{% endfor %}</div>
+      {{ timeline(L.heritage.timeline) }}
+      <div><a class="btn btn-ink" href="{{ link(about_path) }}"><span>{{ L.heritage.more }}</span> <i>{{ L.arrow }}</i></a></div>
+    </div>
+  </div>
+  {{ show('show-wide') }}
+</section>
+
+<section class="sustain" id="doga">
+  <div class="su-hero">
+    <img src="{{ asset(S.sustain_images.main) }}" alt="{{ L.sustain.img_alt }}" width="2000" height="1333" loading="lazy">
+    <div class="su-copy px">
+      <p class="eyebrow">{{ L.sustain.eyebrow }}</p>
+      <h2>{{ L.sustain.h[0] }} <span>{{ L.sustain.h[1] }}</span></h2>
+      <p class="su-lead">{{ L.sustain.lead }}</p>
+    </div>
+  </div>
+  <div class="su-body px">
+    {{ pillars() }}
+    <p class="more"><a class="lnk" href="{{ link(about_path) }}#surdurulebilirlik">{{ L.sustain.more }} {{ L.arrow }}</a></p>
   </div>
 </section>
 

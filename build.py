@@ -7,7 +7,7 @@ Usage:
   python3 build.py --preview  # links point at index.html files (for local file viewing)
 Requires: pip install jinja2 pyyaml
 """
-import json, shutil, sys
+import hashlib, json, shutil, sys, urllib.request
 from pathlib import Path
 import yaml
 from jinja2 import Environment, FileSystemLoader
@@ -50,6 +50,56 @@ if OUT.exists():
 OUT.mkdir()
 shutil.copytree(ROOT / "assets", OUT / "assets")
 (OUT / ".nojekyll").write_text("")
+
+# ---- images: "src" may be a local path or an https URL --------------------
+# Remote images are downloaded at build time and served with the site; if a
+# download fails the original URL is used so the page still shows the image.
+CACHE = ROOT / ".cache" / "img"
+REMOTE = {}
+
+
+def remote_url(src):
+    if "images.unsplash.com" in src and "?" not in src:
+        return src + "?w=2000&q=72&fm=jpg&fit=crop&auto=format"
+    return src
+
+
+def resolve(src):
+    """Return a path relative to the site root, or an absolute URL."""
+    if not src.startswith("http"):
+        return src
+    if src in REMOTE:
+        return REMOTE[src]
+    url = remote_url(src)
+    name = hashlib.sha1(src.encode()).hexdigest()[:12] + ".jpg"
+    cached = CACHE / name
+    try:
+        if not cached.exists():
+            CACHE.mkdir(parents=True, exist_ok=True)
+            req = urllib.request.Request(url, headers={"User-Agent": "standart-entegre-build"})
+            with urllib.request.urlopen(req, timeout=40) as r:
+                cached.write_bytes(r.read())
+        dest = OUT / "assets/img/remote" / name
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(cached, dest)
+        REMOTE[src] = "assets/img/remote/" + name
+    except Exception as e:  # offline build: fall back to the URL
+        print(f"  ! image not downloaded ({e.__class__.__name__}), using URL: {src}")
+        REMOTE[src] = url
+    return REMOTE[src]
+
+
+def asset_for(root):
+    def asset(src):
+        r = resolve(src)
+        return r if r.startswith("http") else root + r
+    return asset
+
+
+def absolute(src):
+    r = resolve(src)
+    return r if r.startswith("http") else base + r
+
 
 sitemap = []
 for code in site["languages"]:
@@ -102,13 +152,13 @@ for code in site["languages"]:
             graph.append({"@type": "BreadcrumbList", "itemListElement": [
                 {"@type": "ListItem", "position": i + 1, "name": n, "item": u} for i, (n, u) in enumerate(crumbs)]})
 
-        page = dict(kind=kind, key=key, title=title, desc=desc, abs=base + path, og_image=og,
+        page = dict(kind=kind, key=key, title=title, desc=desc, abs=base + path, og_image=absolute(og),
                     alternates=alternates, x_default=base + ALL[default][(kind, key)],
                     jsonld=json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False).replace("</", "<\\/"))
         js = dict(L["js"], locale=L["locale"])
         tpl = {"home": "home.html", "products": "products.html", "about": "about.html", "product": "product.html"}[kind]
         html = env.get_template(tpl).render(
-            S=site, L=L, page=page, root=root, link=link, products=products, prod=prod,
+            S=site, L=L, page=page, root=root, link=link, asset=asset_for(root), products=products, prod=prod,
             home_path=paths[("home", None)], products_path=paths[("products", None)], about_path=paths[("about", None)],
             js_strings=json.dumps(js, ensure_ascii=False).replace("</", "<\\/"))
         dest = OUT / path / "index.html"

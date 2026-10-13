@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import show with context %}
+{% from "_macros.html" import show, timeline, pillars with context %}
 {% block main %}
 <section class="ab-hero" data-hero>
   {{ show('show-bg') }}
@@ -14,6 +14,13 @@
   <div class="pp-body">
     <p class="eyebrow">{{ L.about.story_eyebrow }}</p>
     <div class="story story-lg">{% for s in L.about.story %}<p>{{ s }}</p>{% endfor %}</div>
+  </div>
+</section>
+
+<section class="sec px" style="padding-top:0" id="tarihce">
+  <div class="pp-body">
+    <p class="eyebrow">{{ L.about.history_eyebrow }}</p>
+    <div>{{ timeline(L.heritage.timeline) }}</div>
   </div>
 </section>
 
@@ -33,6 +40,32 @@
   <div class="pp-body">
     <p class="eyebrow">{{ L.about.process_eyebrow }}</p>
     <ol class="flow">{% for s in L.about.process %}<li><b>{{ s[0] }}</b><span>{{ s[1] }}</span></li>{% endfor %}</ol>
+  </div>
+</section>
+
+<section class="sustain sustain-page" id="surdurulebilirlik">
+  <div class="su-hero">
+    <img src="{{ asset(S.sustain_images.main) }}" alt="{{ L.sustain.img_alt }}" width="2000" height="1333" loading="lazy">
+    <div class="su-copy px">
+      <p class="eyebrow">{{ L.sustain.eyebrow }}</p>
+      <h2>{{ L.sustain.h[0] }} <span>{{ L.sustain.h[1] }}</span></h2>
+      <p class="su-lead">{{ L.sustain.lead }}</p>
+    </div>
+  </div>
+  <div class="su-body px">
+    {{ pillars() }}
+    <div class="planting">
+      <figure><img src="{{ asset(S.sustain_images.planting) }}" alt="{{ L.sustain.planting_alt }}" width="1600" height="1067" loading="lazy"></figure>
+      <div class="planting-copy">
+        <p class="eyebrow">{{ L.sustain.planting_eyebrow }}</p>
+        <h3>{{ L.sustain.planting_h }}</h3>
+        <p>{{ L.sustain.planting_p }}</p>
+        {% set pl = S.planting %}{% if pl.partner or pl.trees_total or pl.since %}
+        <div class="facts facts-wide">{% for k in ['trees_total', 'since', 'partner'] %}{% if pl[k] %}<div class="fact"><strong>{{ pl[k] }}</strong><span>{{ L.sustain.labels[k] }}</span></div>{% endif %}{% endfor %}</div>
+        {% endif %}
+        <div class="recycle"><b>{{ L.sustain.recycling_h }}</b><p>{{ L.sustain.recycling_p }}</p></div>
+      </div>
+    </div>
   </div>
 </section>
 

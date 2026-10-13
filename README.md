@@ -12,18 +12,25 @@ Kod bilmeden, GitHub üzerinden dosyayı açıp kalem simgesiyle düzenleyebilir
 | Türkçe metinler | `content/tr.yml` |
 | İngilizce / Fransızca / Arapça / İspanyolca | `content/en.yml`, `fr.yml`, `ar.yml`, `es.yml` |
 | Şirket bilgileri (kuruluş yılı, m², kapasite, telefon, e-posta, adres, sertifikalar) | `content/site.yml` → `company` |
+| Ana sayfa kapağında 3D makaranın arkasında akan görseller | `content/site.yml` → `hero_images` |
 | Kurumsal bölümündeki akan görseller | `content/site.yml` → `gallery` |
+| Doğa ve sürdürülebilirlik görselleri | `content/site.yml` → `sustain_images` |
+| Tarihçe (1963'ten bugüne) | dil dosyası → `heritage` (`timeline` satırları: [yıl, başlık, açıklama]) |
+| Sürdürülebilirlik, ağaç dikimi, geri dönüşüm metinleri | dil dosyası → `sustain` |
+| Ağaç dikimi rakamları (kurum, dikilen ağaç, başlangıç yılı) | `content/site.yml` → `planting` (boşsa görünmez) |
 | Makara ölçü aralığı (550–3200 mm) | `content/site.yml` → `reel_min_mm`, `reel_max_mm` |
 | Teklif formunun gideceği adres | `content/site.yml` → `form_endpoint` |
 | Domain | `content/site.yml` → `base_url` |
 
 `company` altındaki bir alan boşsa sitede görünmez. Doldurduğunuz anda Kurumsal sayfasında belirir.
 
-### Kurumsal görsellerini gerçek fotoğraflarla değiştirmek
+### Görselleri kendi fabrika ve üretim fotoğraflarınızla değiştirmek
 
-1. Fotoğrafları `assets/img/kurumsal/` klasörüne yükleyin (önerilen 1800 × 1200 px, JPG).
-2. `content/site.yml` → `gallery` listesinde `src` satırlarını yeni dosya adlarıyla değiştirin.
-3. Açıklamaları her dil dosyasındaki `gallery:` bölümünden güncelleyin; temsili görsel notunu kaldırmak için `gallery_note: ""` yazın.
+Şu an kapak, Kurumsal ve sürdürülebilirlik görselleri Unsplash'ten (ücretsiz ticari kullanım lisansı) temsili fotoğraflardır. Yayına alınırken otomatik indirilip siteyle birlikte sunulur.
+
+1. Fotoğrafları `assets/img/kurumsal/` klasörüne yükleyin (önerilen 1800 × 1200 px veya daha büyük, JPG).
+2. `content/site.yml` içinde `hero_images`, `gallery` veya `sustain_images` altındaki `src` satırını yeni dosya yoluyla değiştirin (örn. `assets/img/kurumsal/fabrika-01.jpg`).
+3. Açıklamaları her dil dosyasındaki `gallery:` bölümünden güncelleyin; kendi fotoğraflarınıza geçince temsili görsel notunu kaldırmak için `gallery_note: ""` yazın.
 
 ### Yeni dil eklemek
 

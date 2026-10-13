@@ -32,6 +32,7 @@ company:
   email: ""
   address: ""
   city: "Gebze, Kocaeli"
+  heritage_year: "1963"  # üretim geçmişinin başladığı yıl
   # Belgeler: her biri için kısa ad ve (varsa) görsel yolu
   certificates: []
   #  - name: "ISPM-15"
@@ -62,22 +63,54 @@ products:
 categories: [makaralar, ambalaj]
 
 # ---------------------------------------------------------------
-# Kurumsal bölümünde akan görseller.
-# Gerçek fotoğrafları assets/img/kurumsal/ klasörüne yükleyip
-# aşağıdaki "src" satırlarını değiştirmeniz yeterli.
-# Önerilen ölçü: 1800 × 1200 px, JPG. Açıklamalar dil dosyalarında (gallery).
+# GÖRSELLER
+# "src" bir dosya yolu (assets/img/...) ya da bir https adresi olabilir.
+# https adresleri yayına alırken otomatik indirilir ve siteyle birlikte sunulur.
+# Kendi fabrika/üretim fotoğraflarınız hazır olunca: dosyayı assets/img/kurumsal/
+# klasörüne yükleyin, ilgili "src" satırını o dosya yoluyla değiştirin.
+# Önerilen ölçü: 1800 × 1200 px veya daha büyük, JPG.
+# Açıklama metinleri dil dosyalarında (gallery bölümü).
+# Şu anki fotoğraflar Unsplash'ten (ücretsiz ticari kullanım lisansı), temsilidir.
 # ---------------------------------------------------------------
-gallery:
-  - key: tomruk
-    src: assets/img/kurumsal/01-tomruk.jpg
-  - key: kereste
-    src: assets/img/kurumsal/02-kereste.jpg
-  - key: imalat
-    src: assets/img/kurumsal/03-imalat.jpg
-  - key: saha
-    src: assets/img/kurumsal/04-makara-saha.jpg
-  - key: palet
-    src: assets/img/kurumsal/05-palet-stok.jpg
-  - key: sevkiyat
-    src: assets/img/kurumsal/06-sevkiyat.jpg
 
+# Ana sayfa kapağı: 3D makaranın arkasında akan görseller (doğa → ahşap → üretim → ürün)
+hero_images:
+  - key: orman
+    src: "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d"
+  - key: orman_isik
+    src: "https://images.unsplash.com/photo-1605714726527-411541ab17f4"
+  - key: tomruk
+    src: "https://images.unsplash.com/photo-1417026846249-f31f7e43fc35"
+  - key: kereste
+    src: "https://images.unsplash.com/photo-1634672652995-ee7525bce595"
+  - key: makara
+    src: "https://images.unsplash.com/photo-1777269390102-2284b67b9183"
+
+# Kurumsal bölümünde ve Kurumsal sayfa kapağında akan görseller
+gallery:
+  - key: orman
+    src: "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d"
+  - key: tomruk
+    src: "https://images.unsplash.com/photo-1417026846249-f31f7e43fc35"
+  - key: kesim
+    src: "https://images.unsplash.com/photo-1749572855201-feb5cf658479"
+  - key: kereste
+    src: "https://images.unsplash.com/photo-1634672652995-ee7525bce595"
+  - key: makara
+    src: "https://images.unsplash.com/photo-1777269390102-2284b67b9183"
+  - key: palet
+    src: "https://images.unsplash.com/photo-1729161632263-a0e0da501895"
+
+# Doğa ve sürdürülebilirlik bölümü görselleri
+sustain_images:
+  main: "https://images.unsplash.com/photo-1502252430442-aac78f397426"
+  planting: "https://images.unsplash.com/photo-1641320201668-1b2bedb4a066"
+
+# ---------------------------------------------------------------
+# Ağaç dikimi ve geri dönüşüm (Kurumsal sayfa).
+# Kurum ve uygulama detayları netleşince doldurun; boş alan sitede görünmez.
+# ---------------------------------------------------------------
+planting:
+  partner: ""        # ağaçların dikildiği kurum / vakıf, örn. "TEMA Vakfı"
+  trees_total: ""    # bugüne kadar dikilen ağaç, örn. "12.000"
+  since: ""          # uygulamanın başladığı yıl, örn. "2015"

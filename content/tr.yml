@@ -21,17 +21,17 @@ nav:
 
 meta:
   home_title: "Standart Entegre · Ahşap Kablo Makarası, Karton Makara, Palet ve Mermer Kasası"
-  home_desc: "Kablo sevk makaraları, ahşap makara ve karton makaralar ile ahşap palet, ihracat sandığı ve mermer kasası üretimi. Makara üretimi 55 cm’den 3,20 m’ye."
+  home_desc: "1963’ten bu yana ahşap üretim geçmişi. Kablo sevk makaraları, ahşap ve karton makaralar, ahşap palet, ihracat sandığı ve mermer kasası. Makara üretimi 55 cm’den 3,20 m’ye."
   products_title: "Ürünler · Kablo Sevk Makaraları, Karton Makaralar, Palet, Sandık, Mermer Kasası"
   products_desc: "Standart Entegre ürünleri: ahşap kablo sevk makaraları (55 cm – 3,20 m), karton makaralar, ahşap paletler, taşıma ve ihracat sandıkları, mermer kasası."
   about_title: "Kurumsal · Standart Entegre"
-  about_desc: "Standart Entegre: tomruktan sevkiyata entegre ahşap ambalaj üretimi. Gebze tesisinde kablo sevk makarası, palet, sandık ve mermer kasası."
+  about_desc: "Standart Entegre: 1963’e uzanan üretim geçmişi, tomruktan sevkiyata entegre ahşap ambalaj üretimi ve doğaya duyarlı yaklaşım. Gebze tesisinde makara, palet, sandık ve mermer kasası."
 
 hero:
   kicker: "Ahşap makara · Karton makara · Palet · Sandık · Mermer kasası"
   place: "Gebze, Türkiye"
-  h1: "Endüstriyel sevkiyat için ahşap çözümler"
-  lead: "Kablo sevk makaralarından karton makaralara, paletlerden ihracat sandıklarına ve mermer kasalarına. Standart ölçüde ya da yükünüze göre özel üretim."
+  h1: "Ağaçtan sevkiyata, 1963’ten bu yana"
+  lead: "Kablo sevk makaralarından karton makaralara, paletlerden ihracat sandıklarına ve mermer kasalarına. Doğanın yenilenen malzemesi ahşabı, sanayinin sevkiyat ihtiyacına göre işliyoruz."
   cta_products: "Ürünleri keşfet"
   cta_quote: "Teklif al"
   scroll: "Makarayı inceleyin"
@@ -234,15 +234,19 @@ tool:
   fine: "Aynı ölçekte çizilmiştir. Konteyner kapı ölçüleri yaklaşık değerlerdir; sevkiyat planı için ekibimize danışın."
 
 about:
-  h1: "Tomruktan sevkiyata, tek yapı içinde."
-  lead: "Standart Entegre; kablo sevk makarası, karton makara, palet, sandık ve mermer kasası üreten entegre bir ahşap ambalaj üreticisidir."
+  h1: "1963’ten bugüne, ağaçtan sevkiyata."
+  lead: "Standart Entegre; köklü üretim geçmişini, modern sanayi anlayışını ve doğaya duyarlı yaklaşımı bir araya getiren entegre bir ahşap ambalaj üreticisidir."
   story_eyebrow: "Hikâyemiz"
   story:
+    - "Üretim geçmişimiz 1963’e uzanıyor. O günden bu yana farklı firmalarımız aracılığıyla kablo makarası, ahşap palet ve meşrubat sandığı ürettik; Türkiye sanayisinin büyüyen sevkiyat ihtiyacına ahşapla cevap verdik."
     - "Adımızdaki “entegre” bir üretim biçimini anlatır. Tomruk kesiminden kereste hazırlığına, makara ve sandık imalatından sevkiyata kadar işin tamamını aynı yapı içinde yürütürüz. Hammaddeyi tomruk kesimiyle kendimiz hazırlar, tahta ve sıkıştırılmış takozu ithalat yoluyla da tedarik ederiz."
     - "Gebze tesisimizde kablo sevk makaraları, karton makaralar, ahşap paletler, taşıma ve ihracat sandıkları ile mermer kasaları üretiyoruz. Müşterilerimiz enerji ve telekomünikasyon kablosu üreticileri, çelik halat ve tel üreticileri, mermer ve doğal taş firmaları ve ihracat yapan sanayi kuruluşlarıdır."
     - "Her siparişe yükten başlarız: kablonun kesiti ve boyu, plakanın ölçüsü, makinenin ağırlığı. Ahşap makaralarda 55 cm’den 3,20 m’ye kadar yanak çapında üretim yapıyor, standart makara ölçülerinin yanında projeye özel ölçüler de hazırlıyoruz."
+  history_eyebrow: "Tarihçe"
   facility_eyebrow: "Tesis ve kapasite"
   facts_fixed:
+    - ["1963", "Üretim geçmişinin başlangıcı"]
+    - ["60+ yıl", "Ahşap üretiminde deneyim"]
     - ["Ø 55 cm – 3,20 m", "Makara yanak çapı"]
     - ["5", "Ürün ailesi"]
     - ["Gebze", "Üretim tesisi"]
@@ -263,13 +267,49 @@ about:
   cta_h: "Projeniz için doğru ürünü birlikte belirleyelim."
 
 gallery:
+  orman: "Orman: hammaddemizin kaynağı"
   tomruk: "Tomruk stok sahası"
+  kesim: "Tomruğun biçilmesi"
   kereste: "Kurumaya alınmış kereste"
-  imalat: "Makara yanağı ve bağlantı detayı"
-  saha: "Sevkiyata hazır kablo makaraları"
-  palet: "Palet stoku"
-  sevkiyat: "Sandık, mermer kasası ve karton makara"
+  makara: "Ahşap kablo makaraları"
+  palet: "Ahşap palet stoku"
 gallery_note: "Görseller temsilidir."
+
+heritage:
+  eyebrow: "Kurumsal · 1963’ten bugüne"
+  year_caption: "Ahşap üretim geçmişimizin başladığı yıl"
+  h: "Köklü bir üretim geçmişi, modern bir sanayi anlayışı."
+  story:
+    - "Üretim geçmişimiz 1963’e uzanıyor. Yıllar içinde farklı firmalarımız aracılığıyla kablo makarası, ahşap palet ve meşrubat sandığı ürettik; sanayinin büyüyen sevkiyat ihtiyacıyla birlikte biz de büyüdük."
+    - "Bugün bu birikimi Standart Entegre çatısı altında sürdürüyoruz. Gebze tesisimizde tomruktan sevkiyata uzanan entegre bir üretim zinciriyle kablo sevk makarası, karton makara, palet, sandık ve mermer kasası üretiyoruz."
+  # Ara yıllar netleşince "Sonraki yıllar" yerine yıl yazın veya yeni satır ekleyin: [yıl, başlık, açıklama]
+  timeline:
+    - ["1963", "Başlangıç", "Ahşap üretimindeki geçmişimizin ilk adımı."]
+    - ["Sonraki yıllar", "Sandık, makara, palet", "Farklı firmalarımız aracılığıyla meşrubat sandığı, kablo makarası ve ahşap palet üretimi."]
+    - ["Bugün", "Standart Entegre", "Tomruktan sevkiyata entegre üretim; beş ürün ailesi, yurt içi ve ihracat."]
+  more: "Hikâyemizi okuyun"
+
+sustain:
+  eyebrow: "Doğa ve sürdürülebilirlik"
+  h: ["Ahşap, doğanın yenilenen malzemesi.", "Onu sorumlulukla işliyoruz."]
+  lead: "Ürünlerimizin hammaddesi ormandan geliyor. Bu yüzden üretimin her adımında doğaya karşı sorumluluğumuzu da hesaba katıyoruz: hammaddeyi verimli kullanmak, ürünü uzun ömürlü yapmak ve doğaya geri kazandırmak."
+  pillars:
+    - ["Yenilenebilir hammadde", "Ahşap, doğru yönetildiğinde yeniden yetişen bir kaynaktır. Kesimden imalata hammaddeyi verimli kullanır, artığı en aza indiririz."]
+    - ["Tekrar kullanım ve geri dönüşüm", "Ahşap makara ve paletler defalarca kullanılabilir. Ömrünü tamamlayan ahşabın geri dönüşüme kazandırılması için çalışıyoruz."]
+    - ["Müşterilerimiz adına ağaç", "Her yıl müşterilerimiz adına ağaç dikiyoruz; kullandığımız ahşabı doğaya geri kazandırmanın bir yolu olarak."]
+  more: "Yaklaşımımızı inceleyin"
+  planting_eyebrow: "Sosyal sorumluluk"
+  planting_h: "Her yıl, müşterilerimiz adına ağaç."
+  # Kurum ve uygulama detayları netleşince bu iki metni güncelleyin
+  planting_p: "Her yıl müşterilerimiz adına fidan dikiyoruz. Ürettiğimiz her makara ve palet ormandan gelen bir ağaçla başlıyor; o ağacı yerine koymayı işimizin bir parçası sayıyoruz."
+  recycling_h: "Uluslararası geri dönüşüm iş birliği"
+  recycling_p: "Kullanım ömrünü tamamlayan ahşap ambalajın yeniden değerlendirilmesi için Fransa bağlantılı bir geri dönüşüm iş birliği yürütüyoruz."
+  labels:
+    partner: "Fidanların dikildiği kurum"
+    trees_total: "Dikilen ağaç"
+    since: "Uygulamanın başlangıcı"
+  img_alt: "Sisli bir çam ormanının havadan görünümü"
+  planting_alt: "Toprağa yeni dikilmiş bir fidan"
 
 refs:
   eyebrow: "Sektörler"

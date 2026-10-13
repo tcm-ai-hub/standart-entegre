@@ -21,17 +21,17 @@ nav:
 
 meta:
   home_title: "Standart Entegre · Wooden Cable Reels, Cardboard Reels, Pallets and Marble Crates"
-  home_desc: "Manufacturer of wooden cable reels, cardboard reels, wooden pallets, export crates and marble crates in Turkey. Reel flange diameters from 55 cm to 3.20 m."
+  home_desc: "Wood manufacturing heritage since 1963. Wooden cable reels, cardboard reels, wooden pallets, export crates and marble crates from Turkey. Reel flange diameters from 55 cm to 3.20 m."
   products_title: "Products · Cable Reels, Cardboard Reels, Pallets, Crates, Marble Crates"
   products_desc: "Standart Entegre products: wooden cable reels (55 cm – 3.20 m), cardboard reels, wooden pallets, transport and export crates, marble crates."
   about_title: "About · Standart Entegre"
-  about_desc: "Standart Entegre: integrated wooden packaging production from log to shipment. Cable reels, pallets, crates and marble crates made in Gebze, Turkey."
+  about_desc: "Standart Entegre: a manufacturing heritage dating back to 1963, integrated wooden packaging production from log to shipment, and a nature-conscious approach. Made in Gebze, Turkey."
 
 hero:
   kicker: "Wooden reels · Cardboard reels · Pallets · Crates · Marble crates"
   place: "Gebze, Turkey"
-  h1: "Wooden solutions for industrial shipping"
-  lead: "From cable reels and cardboard reels to pallets, export crates and marble crates. Standard sizes or made to fit your load."
+  h1: "From tree to shipment, since 1963"
+  lead: "From cable reels and cardboard reels to pallets, export crates and marble crates. We turn wood, nature’s renewable material, into the shipping solutions industry needs."
   cta_products: "Explore products"
   cta_quote: "Request a quote"
   scroll: "Take the reel apart"
@@ -234,15 +234,19 @@ tool:
   fine: "Drawn to scale. Container door sizes are approximate; ask our team when planning a shipment."
 
 about:
-  h1: "From log to shipment, under one roof."
-  lead: "Standart Entegre is an integrated wooden packaging manufacturer making cable reels, cardboard reels, pallets, crates and marble crates."
+  h1: "Since 1963, from tree to shipment."
+  lead: "Standart Entegre is an integrated wooden packaging manufacturer that brings together a long manufacturing heritage, a modern industrial mindset and a nature-conscious approach."
   story_eyebrow: "Our story"
   story:
+    - "Our manufacturing history goes back to 1963. Since then, through our different companies, we have made cable reels, wooden pallets and soft-drink crates, answering the growing shipping needs of Turkish industry with wood."
     - "“Entegre” in our name means integrated, and it describes how we work. Log cutting, timber preparation, reel and crate making and shipping all happen within one operation. We prepare our raw material by cutting logs ourselves, and we also import boards and compressed blocks."
     - "At our Gebze plant we make wooden cable reels, cardboard reels, wooden pallets, transport and export crates and marble crates. Our customers are power and telecom cable makers, steel rope and wire producers, marble and natural stone companies and exporting manufacturers."
     - "Every order starts from the load: the cable’s cross-section and length, the slab size, the machine’s weight. We build wooden reels with flange diameters from 55 cm to 3.20 m, in standard reel sizes and in custom sizes for each project."
+  history_eyebrow: "History"
   facility_eyebrow: "Plant and capacity"
   facts_fixed:
+    - ["1963", "Start of our manufacturing history"]
+    - ["60+ years", "Experience in wood manufacturing"]
     - ["Ø 55 cm – 3.20 m", "Reel flange diameter"]
     - ["5", "Product families"]
     - ["Gebze", "Production plant"]
@@ -263,13 +267,49 @@ about:
   cta_h: "Let’s find the right product for your project."
 
 gallery:
+  orman: "The forest, source of our raw material"
   tomruk: "Log yard"
+  kesim: "Sawing logs"
   kereste: "Timber stacked for drying"
-  imalat: "Reel flange and joint detail"
-  saha: "Cable reels ready for shipment"
-  palet: "Pallet stock"
-  sevkiyat: "Crate, marble crate and cardboard reel"
+  makara: "Wooden cable reels"
+  palet: "Wooden pallet stock"
 gallery_note: "Representative images."
+
+heritage:
+  eyebrow: "About · Since 1963"
+  year_caption: "The year our wood manufacturing story began"
+  h: "A long manufacturing heritage, a modern industrial mindset."
+  story:
+    - "Our manufacturing history goes back to 1963. Over the years, through our different companies, we made cable reels, wooden pallets and soft-drink crates, and we grew alongside industry’s growing shipping needs."
+    - "Today we carry that experience forward as Standart Entegre. At our Gebze plant, an integrated chain from log to shipment produces cable reels, cardboard reels, pallets, crates and marble crates."
+  # Ara yıllar netleşince "Sonraki yıllar" yerine yıl yazın veya yeni satır ekleyin: [yıl, başlık, açıklama]
+  timeline:
+    - ["1963", "The beginning", "The first step in our wood manufacturing history."]
+    - ["The years that followed", "Crates, reels, pallets", "Soft-drink crates, cable reels and wooden pallets, made through our different companies."]
+    - ["Today", "Standart Entegre", "Integrated production from log to shipment; five product families, domestic and export."]
+  more: "Read our story"
+
+sustain:
+  eyebrow: "Nature and sustainability"
+  h: ["Wood is nature’s renewable material.", "We work it responsibly."]
+  lead: "Our raw material comes from the forest, so we weigh our responsibility to nature at every step of production: using raw material efficiently, making products that last, and giving back to nature."
+  pillars:
+    - ["Renewable raw material", "Well managed, wood is a resource that grows back. From cutting to manufacturing we use raw material efficiently and keep waste to a minimum."]
+    - ["Reuse and recycling", "Wooden reels and pallets can be used again and again. We work to recycle wood that has reached the end of its life."]
+    - ["Trees for our customers", "Every year we plant trees on behalf of our customers, as a way of giving back the wood we use."]
+  more: "See our approach"
+  planting_eyebrow: "Social responsibility"
+  planting_h: "Every year, trees planted for our customers."
+  # Kurum ve uygulama detayları netleşince bu iki metni güncelleyin
+  planting_p: "Every year we plant saplings on behalf of our customers. Every reel and pallet we make starts with a tree from the forest; replacing that tree is part of our work."
+  recycling_h: "International recycling partnership"
+  recycling_p: "We run a France-linked recycling partnership so that wooden packaging at the end of its life is put to use again."
+  labels:
+    partner: "Planting partner"
+    trees_total: "Trees planted"
+    since: "Programme since"
+  img_alt: "Aerial view of a misty pine forest"
+  planting_alt: "A sapling newly planted in soil"
 
 refs:
   eyebrow: "Industries"

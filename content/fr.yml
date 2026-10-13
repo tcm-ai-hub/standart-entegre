@@ -21,17 +21,17 @@ nav:
 
 meta:
   home_title: "Standart Entegre · Tourets de câble en bois, bobines en carton, palettes et caisses à marbre"
-  home_desc: "Fabricant turc de tourets de câble en bois, bobines en carton, palettes, caisses d’exportation et caisses à marbre. Joues de 55 cm à 3,20 m de diamètre."
+  home_desc: "Savoir-faire du bois depuis 1963. Tourets de câble en bois, bobines en carton, palettes, caisses d’exportation et caisses à marbre fabriqués en Turquie. Joues de 55 cm à 3,20 m."
   products_title: "Produits · Tourets de câble, bobines en carton, palettes, caisses, caisses à marbre"
   products_desc: "Produits Standart Entegre : tourets de câble en bois (55 cm – 3,20 m), bobines en carton, palettes en bois, caisses de transport et d’exportation, caisses à marbre."
   about_title: "Entreprise · Standart Entegre"
-  about_desc: "Standart Entegre : production intégrée d’emballages en bois, de la grume à l’expédition. Tourets, palettes, caisses et caisses à marbre fabriqués à Gebze, Turquie."
+  about_desc: "Standart Entegre : un savoir-faire qui remonte à 1963, une production intégrée d’emballages en bois de la grume à l’expédition et une approche respectueuse de la nature. Fabriqué à Gebze, Turquie."
 
 hero:
   kicker: "Tourets en bois · Bobines en carton · Palettes · Caisses · Caisses à marbre"
   place: "Gebze, Turquie"
-  h1: "Des solutions en bois pour l’expédition industrielle"
-  lead: "Des tourets de câble et bobines en carton aux palettes, caisses d’exportation et caisses à marbre. En dimensions standard ou sur mesure selon votre charge."
+  h1: "De l’arbre à l’expédition, depuis 1963"
+  lead: "Des tourets de câble et bobines en carton aux palettes, caisses d’exportation et caisses à marbre. Nous transformons le bois, matériau renouvelable de la nature, en solutions d’expédition pour l’industrie."
   cta_products: "Voir les produits"
   cta_quote: "Demander un devis"
   scroll: "Démontez le touret"
@@ -234,15 +234,19 @@ tool:
   fine: "Dessin à l’échelle. Les dimensions des portes de conteneur sont approximatives ; consultez notre équipe pour planifier l’expédition."
 
 about:
-  h1: "De la grume à l’expédition, sous un même toit."
-  lead: "Standart Entegre est un fabricant intégré d’emballages en bois : tourets de câble, bobines en carton, palettes, caisses et caisses à marbre."
+  h1: "Depuis 1963, de l’arbre à l’expédition."
+  lead: "Standart Entegre est un fabricant intégré d’emballages en bois qui réunit un long héritage industriel, une vision moderne de l’industrie et une approche respectueuse de la nature."
   story_eyebrow: "Notre histoire"
   story:
+    - "Notre histoire industrielle remonte à 1963. Depuis, à travers nos différentes sociétés, nous avons fabriqué des tourets de câble, des palettes en bois et des caisses à boissons, en répondant avec le bois aux besoins d’expédition croissants de l’industrie turque."
     - "« Entegre » signifie intégré, et décrit notre façon de travailler. Le sciage des grumes, la préparation du bois, la fabrication des tourets et des caisses et l’expédition se font au sein d’une même structure. Nous préparons notre matière première en sciant nous-mêmes les grumes, et importons aussi des planches et des blocs compressés."
     - "Dans notre usine de Gebze, nous fabriquons des tourets de câble en bois, des bobines en carton, des palettes, des caisses de transport et d’exportation et des caisses à marbre. Nos clients sont des câbliers énergie et télécoms, des fabricants de câbles et fils d’acier, des entreprises du marbre et de la pierre naturelle et des industriels exportateurs."
     - "Chaque commande part de la charge : la section et la longueur du câble, la taille des tranches, le poids de la machine. Nous fabriquons des tourets en bois de 55 cm à 3,20 m de diamètre de joue, en tailles standard comme sur mesure."
+  history_eyebrow: "Historique"
   facility_eyebrow: "Usine et capacité"
   facts_fixed:
+    - ["1963", "Début de notre histoire industrielle"]
+    - ["60+ ans", "D’expérience dans le bois"]
     - ["Ø 55 cm – 3,20 m", "Diamètre des joues"]
     - ["5", "Familles de produits"]
     - ["Gebze", "Site de production"]
@@ -263,13 +267,49 @@ about:
   cta_h: "Trouvons ensemble le bon produit pour votre projet."
 
 gallery:
+  orman: "La forêt, source de notre matière première"
   tomruk: "Parc à grumes"
+  kesim: "Sciage des grumes"
   kereste: "Bois empilé pour le séchage"
-  imalat: "Détail de joue et d’assemblage"
-  saha: "Tourets prêts à l’expédition"
-  palet: "Stock de palettes"
-  sevkiyat: "Caisse, caisse à marbre et bobine en carton"
+  makara: "Tourets de câble en bois"
+  palet: "Stock de palettes en bois"
 gallery_note: "Images d’illustration."
+
+heritage:
+  eyebrow: "Entreprise · Depuis 1963"
+  year_caption: "L’année où notre histoire dans le bois a commencé"
+  h: "Un long héritage industriel, une vision moderne de l’industrie."
+  story:
+    - "Notre histoire industrielle remonte à 1963. Au fil des années, à travers nos différentes sociétés, nous avons fabriqué des tourets de câble, des palettes en bois et des caisses à boissons, en grandissant avec les besoins d’expédition de l’industrie."
+    - "Aujourd’hui, nous poursuivons ce savoir-faire sous le nom de Standart Entegre. Dans notre usine de Gebze, une chaîne intégrée de la grume à l’expédition produit tourets, bobines en carton, palettes, caisses et caisses à marbre."
+  # Ara yıllar netleşince "Sonraki yıllar" yerine yıl yazın veya yeni satır ekleyin: [yıl, başlık, açıklama]
+  timeline:
+    - ["1963", "Les débuts", "Le premier pas de notre histoire dans le bois."]
+    - ["Les années suivantes", "Caisses, tourets, palettes", "Caisses à boissons, tourets de câble et palettes en bois, fabriqués par nos différentes sociétés."]
+    - ["Aujourd’hui", "Standart Entegre", "Production intégrée de la grume à l’expédition ; cinq familles de produits, marché intérieur et export."]
+  more: "Lire notre histoire"
+
+sustain:
+  eyebrow: "Nature et durabilité"
+  h: ["Le bois, matériau renouvelable de la nature.", "Nous le travaillons de façon responsable."]
+  lead: "Notre matière première vient de la forêt. À chaque étape de la production, nous tenons compte de notre responsabilité envers la nature : utiliser la matière avec efficacité, fabriquer des produits durables et rendre à la nature."
+  pillars:
+    - ["Matière renouvelable", "Bien gérée, la forêt se renouvelle. De la découpe à la fabrication, nous utilisons la matière avec efficacité et réduisons les chutes au minimum."]
+    - ["Réemploi et recyclage", "Les tourets et palettes en bois se réutilisent de nombreuses fois. Nous œuvrons au recyclage du bois en fin de vie."]
+    - ["Des arbres pour nos clients", "Chaque année, nous plantons des arbres au nom de nos clients, pour rendre à la nature le bois que nous utilisons."]
+  more: "Découvrir notre démarche"
+  planting_eyebrow: "Responsabilité sociale"
+  planting_h: "Chaque année, des arbres au nom de nos clients."
+  # Kurum ve uygulama detayları netleşince bu iki metni güncelleyin
+  planting_p: "Chaque année, nous plantons de jeunes arbres au nom de nos clients. Chaque touret et chaque palette commence par un arbre de la forêt ; le remplacer fait partie de notre métier."
+  recycling_h: "Partenariat international de recyclage"
+  recycling_p: "Nous menons un partenariat de recyclage lié à la France afin de valoriser les emballages en bois arrivés en fin de vie."
+  labels:
+    partner: "Organisme partenaire"
+    trees_total: "Arbres plantés"
+    since: "Programme depuis"
+  img_alt: "Vue aérienne d’une forêt de pins dans la brume"
+  planting_alt: "Un jeune arbre fraîchement planté"
 
 refs:
   eyebrow: "Secteurs"

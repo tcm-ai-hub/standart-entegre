@@ -13,7 +13,7 @@
 {% macro show(cls='') -%}
 <div class="show {{ cls }}" data-show>
   {% for g in S.gallery %}<figure class="show-item{% if loop.first %} is-on{% endif %}">
-    <img src="{{ root }}{{ g.src }}" alt="{{ L.gallery[g.key] }}" width="1800" height="1200"{% if not loop.first %} loading="lazy"{% endif %}>
+    <img src="{{ asset(g.src) }}" alt="{{ L.gallery[g.key] }}" width="1800" height="1200"{% if not loop.first %} loading="lazy"{% endif %}>
   </figure>{% endfor %}
   <div class="show-bar">
     <span class="show-cap"><span data-show-cap>{{ L.gallery[S.gallery[0].key] }}</span>{% if L.gallery_note %}<small>{{ L.gallery_note }}</small>{% endif %}</span>
@@ -59,4 +59,23 @@
     <div class="sector-uses"><span>{{ L.refs.uses }}</span>{% for k in sct.products %}{% set pp = products|selectattr('key','equalto',k)|first %}<a href="{{ link(pp.path) }}">{{ pp.t.name }}</a>{% endfor %}</div>
   </li>{% endfor %}
 </ul>
+{%- endmacro %}
+
+
+{% macro hero_flow() -%}
+<div class="hero-bg" data-show aria-hidden="true">
+  {% for g in S.hero_images %}<figure class="show-item{% if loop.first %} is-on{% endif %}"><img src="{{ asset(g.src) }}" alt="" width="2000" height="1333"{% if not loop.first %} loading="lazy"{% else %} fetchpriority="high"{% endif %}></figure>{% endfor %}
+</div>
+{%- endmacro %}
+
+{% macro timeline(items) -%}
+<ol class="tline">
+  {% for y, h, p in items %}<li><span class="tl-year">{{ y }}</span><b>{{ h }}</b><p>{{ p }}</p></li>{% endfor %}
+</ol>
+{%- endmacro %}
+
+{% macro pillars() -%}
+<ol class="pillars">
+  {% for h, p in L.sustain.pillars %}<li><i class="num">{{ '%02d' % loop.index }}</i><h3>{{ h }}</h3><p>{{ p }}</p></li>{% endfor %}
+</ol>
 {%- endmacro %}
