@@ -21,11 +21,11 @@ nav:
 
 meta:
   home_title: "Standart Entegre · Bobinas de madera para cable, bobinas de cartón, palets y cajas para mármol"
-  home_desc: "Tradición en madera desde 1963. Bobinas de madera para cable, bobinas de cartón, palets, cajas de exportación y cajas para mármol fabricados en Turquía. Diámetros de ala de 55 cm a 3,20 m."
+  home_desc: "Embalaje de madera y bobinas para cable desde 1963. Bobinas de madera para cable, bobinas de cartón, palets, cajas de exportación y cajas para mármol fabricados en Turquía. Diámetros de ala de 55 cm a 3,20 m."
   products_title: "Productos · Bobinas para cable, bobinas de cartón, palets, cajas, cajas para mármol"
   products_desc: "Productos de Standart Entegre: bobinas de madera para cable (55 cm – 3,20 m), bobinas de cartón, palets de madera, cajas de transporte y exportación, cajas para mármol."
   about_title: "Empresa · Standart Entegre"
-  about_desc: "Standart Entegre: una trayectoria que se remonta a 1963, producción integrada de embalaje de madera del tronco al envío y un enfoque respetuoso con la naturaleza. Fabricado en Gebze, Turquía."
+  about_desc: "Standart Entegre: una historia en productos forestales desde 1946, fabricación de embalaje de madera y bobinas para cable desde 1963 y un enfoque respetuoso con la naturaleza. Fabricado en Gebze, Turquía."
 
 hero:
   kicker: "Bobinas de madera · Bobinas de cartón · Palets · Cajas · Cajas para mármol"
@@ -238,15 +238,16 @@ about:
   lead: "Standart Entegre es un fabricante integrado de embalaje de madera que une una larga trayectoria industrial, una visión moderna de la industria y un enfoque respetuoso con la naturaleza."
   story_eyebrow: "Nuestra historia"
   story:
-    - "Nuestra historia de fabricación se remonta a 1963. Desde entonces, a través de nuestras distintas empresas, hemos fabricado bobinas para cable, palets de madera y cajas para refrescos, respondiendo con madera a las crecientes necesidades de envío de la industria turca."
+    - "La historia de nuestra empresa en productos forestales se remonta a 1946, y nuestra fabricación de embalaje de madera y bobinas para cable, a 1963. Desde entonces, a través de nuestras distintas empresas, hemos fabricado bobinas para cable, palets de madera y cajas para refrescos, respondiendo a las crecientes necesidades de envío de la industria turca."
     - "«Entegre» significa integrado y describe nuestra forma de trabajar. El aserrado de troncos, la preparación de la madera, la fabricación de bobinas y cajas y el envío se realizan dentro de una misma estructura. Preparamos la materia prima aserrando nosotros mismos los troncos y también importamos tablas y tacos prensados."
     - "En nuestra planta de Gebze fabricamos bobinas de madera para cable, bobinas de cartón, palets, cajas de transporte y exportación y cajas para mármol. Nuestros clientes son fabricantes de cable de energía y telecomunicaciones, de cable y alambre de acero, empresas de mármol y piedra natural e industrias exportadoras."
     - "Cada pedido empieza por la carga: la sección y longitud del cable, la medida de la tabla, el peso de la máquina. Fabricamos bobinas de madera de 55 cm a 3,20 m de diámetro de ala, en medidas estándar y a medida de cada proyecto."
   history_eyebrow: "Historia"
   facility_eyebrow: "Planta y capacidad"
   facts_fixed:
-    - ["1963", "Inicio de nuestra historia de fabricación"]
-    - ["Más de 60 años", "De experiencia en madera"]
+    - ["1946", "Nuestras raíces en productos forestales"]
+    - ["1963", "Inicio del embalaje de madera y las bobinas para cable"]
+    - ["Más de 60 años", "De experiencia en embalaje de madera y bobinas"]
     - ["Ø 55 cm – 3,20 m", "Diámetro de ala"]
     - ["5", "Familias de producto"]
     - ["Gebze", "Planta de producción"]
@@ -277,14 +278,15 @@ gallery_note: "Imágenes ilustrativas."
 
 heritage:
   eyebrow: "Empresa · Desde 1963"
-  year_caption: "El año en que comenzó nuestra historia en la madera"
+  year_caption: "El año en que empezamos a fabricar embalaje de madera y bobinas para cable"
   h: "Una larga trayectoria industrial, una visión moderna de la industria."
   story:
-    - "Nuestra historia de fabricación se remonta a 1963. A lo largo de los años, a través de nuestras distintas empresas, fabricamos bobinas para cable, palets de madera y cajas para refrescos, y crecimos junto con las necesidades de envío de la industria."
+    - "La historia de nuestra empresa en productos forestales se remonta a 1946. En 1963 empezamos a fabricar embalaje de madera y bobinas para cable; a lo largo de los años, a través de nuestras distintas empresas, fabricamos bobinas, palets de madera y cajas para refrescos, y crecimos junto con las necesidades de envío de la industria."
     - "Hoy continuamos esa experiencia como Standart Entegre. En nuestra planta de Gebze, una cadena integrada del tronco al envío produce bobinas para cable, bobinas de cartón, palets, cajas y cajas para mármol."
   # Ara yıllar netleşince "Sonraki yıllar" yerine yıl yazın veya yeni satır ekleyin: [yıl, başlık, açıklama]
   timeline:
-    - ["1963", "Los inicios", "El primer paso de nuestra historia en la madera."]
+    - ["1946", "Productos forestales", "El inicio de la historia de nuestra empresa en productos forestales."]
+    - ["1963", "Embalaje de madera y bobinas", "Empezamos a fabricar embalaje de madera y bobinas para cable."]
     - ["Los años siguientes", "Cajas, bobinas, palets", "Cajas para refrescos, bobinas para cable y palets de madera, fabricados por nuestras distintas empresas."]
     - ["Hoy", "Standart Entegre", "Producción integrada del tronco al envío; cinco familias de productos, mercado nacional y exportación."]
   more: "Lea nuestra historia"

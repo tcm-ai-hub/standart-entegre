@@ -21,11 +21,11 @@ nav:
 
 meta:
   home_title: "Standart Entegre · Tourets de câble en bois, bobines en carton, palettes et caisses à marbre"
-  home_desc: "Savoir-faire du bois depuis 1963. Tourets de câble en bois, bobines en carton, palettes, caisses d’exportation et caisses à marbre fabriqués en Turquie. Joues de 55 cm à 3,20 m."
+  home_desc: "Emballages en bois et tourets de câble depuis 1963. Tourets de câble en bois, bobines en carton, palettes, caisses d’exportation et caisses à marbre fabriqués en Turquie. Joues de 55 cm à 3,20 m."
   products_title: "Produits · Tourets de câble, bobines en carton, palettes, caisses, caisses à marbre"
   products_desc: "Produits Standart Entegre : tourets de câble en bois (55 cm – 3,20 m), bobines en carton, palettes en bois, caisses de transport et d’exportation, caisses à marbre."
   about_title: "Entreprise · Standart Entegre"
-  about_desc: "Standart Entegre : un savoir-faire qui remonte à 1963, une production intégrée d’emballages en bois de la grume à l’expédition et une approche respectueuse de la nature. Fabriqué à Gebze, Turquie."
+  about_desc: "Standart Entegre : une histoire dans les produits forestiers depuis 1946, la fabrication d’emballages en bois et de tourets de câble depuis 1963 et une approche respectueuse de la nature. Fabriqué à Gebze, Turquie."
 
 hero:
   kicker: "Tourets en bois · Bobines en carton · Palettes · Caisses · Caisses à marbre"
@@ -238,15 +238,16 @@ about:
   lead: "Standart Entegre est un fabricant intégré d’emballages en bois qui réunit un long héritage industriel, une vision moderne de l’industrie et une approche respectueuse de la nature."
   story_eyebrow: "Notre histoire"
   story:
-    - "Notre histoire industrielle remonte à 1963. Depuis, à travers nos différentes sociétés, nous avons fabriqué des tourets de câble, des palettes en bois et des caisses à boissons, en répondant avec le bois aux besoins d’expédition croissants de l’industrie turque."
+    - "L’histoire de notre entreprise dans les produits forestiers remonte à 1946, et notre fabrication d’emballages en bois et de tourets de câble à 1963. Depuis, à travers nos différentes sociétés, nous avons fabriqué des tourets de câble, des palettes en bois et des caisses à boissons, en répondant aux besoins d’expédition croissants de l’industrie turque."
     - "« Entegre » signifie intégré, et décrit notre façon de travailler. Le sciage des grumes, la préparation du bois, la fabrication des tourets et des caisses et l’expédition se font au sein d’une même structure. Nous préparons notre matière première en sciant nous-mêmes les grumes, et importons aussi des planches et des blocs compressés."
     - "Dans notre usine de Gebze, nous fabriquons des tourets de câble en bois, des bobines en carton, des palettes, des caisses de transport et d’exportation et des caisses à marbre. Nos clients sont des câbliers énergie et télécoms, des fabricants de câbles et fils d’acier, des entreprises du marbre et de la pierre naturelle et des industriels exportateurs."
     - "Chaque commande part de la charge : la section et la longueur du câble, la taille des tranches, le poids de la machine. Nous fabriquons des tourets en bois de 55 cm à 3,20 m de diamètre de joue, en tailles standard comme sur mesure."
   history_eyebrow: "Historique"
   facility_eyebrow: "Usine et capacité"
   facts_fixed:
-    - ["1963", "Début de notre histoire industrielle"]
-    - ["60+ ans", "D’expérience dans le bois"]
+    - ["1946", "Nos racines dans les produits forestiers"]
+    - ["1963", "Début des emballages en bois et des tourets de câble"]
+    - ["60+ ans", "D’expérience en emballages en bois et tourets de câble"]
     - ["Ø 55 cm – 3,20 m", "Diamètre des joues"]
     - ["5", "Familles de produits"]
     - ["Gebze", "Site de production"]
@@ -277,14 +278,15 @@ gallery_note: "Images d’illustration."
 
 heritage:
   eyebrow: "Entreprise · Depuis 1963"
-  year_caption: "L’année où notre histoire dans le bois a commencé"
+  year_caption: "L’année où nous avons commencé à fabriquer emballages en bois et tourets de câble"
   h: "Un long héritage industriel, une vision moderne de l’industrie."
   story:
-    - "Notre histoire industrielle remonte à 1963. Au fil des années, à travers nos différentes sociétés, nous avons fabriqué des tourets de câble, des palettes en bois et des caisses à boissons, en grandissant avec les besoins d’expédition de l’industrie."
+    - "L’histoire de notre entreprise dans les produits forestiers remonte à 1946. En 1963, nous avons commencé à fabriquer des emballages en bois et des tourets de câble ; au fil des années, à travers nos différentes sociétés, nous avons fabriqué tourets, palettes en bois et caisses à boissons, en grandissant avec les besoins d’expédition de l’industrie."
     - "Aujourd’hui, nous poursuivons ce savoir-faire sous le nom de Standart Entegre. Dans notre usine de Gebze, une chaîne intégrée de la grume à l’expédition produit tourets, bobines en carton, palettes, caisses et caisses à marbre."
   # Ara yıllar netleşince "Sonraki yıllar" yerine yıl yazın veya yeni satır ekleyin: [yıl, başlık, açıklama]
   timeline:
-    - ["1963", "Les débuts", "Le premier pas de notre histoire dans le bois."]
+    - ["1946", "Produits forestiers", "Le début de l’histoire de notre entreprise dans les produits forestiers."]
+    - ["1963", "Emballages en bois et tourets", "Début de la fabrication d’emballages en bois et de tourets de câble."]
     - ["Les années suivantes", "Caisses, tourets, palettes", "Caisses à boissons, tourets de câble et palettes en bois, fabriqués par nos différentes sociétés."]
     - ["Aujourd’hui", "Standart Entegre", "Production intégrée de la grume à l’expédition ; cinq familles de produits, marché intérieur et export."]
   more: "Lire notre histoire"
