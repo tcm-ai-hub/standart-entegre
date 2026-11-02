@@ -572,3 +572,26 @@ table.spec td.num { font-size: 1.05rem; }
 /* accents shift to green on dark surfaces */
 .rfq .status { border-inline-start-color: var(--leaf); }
 .btn-solid:hover, .hdr .btn-nav:hover { background: var(--leaf); border-color: var(--leaf); color: #0e1611; }
+
+/* =================================================================
+   v6 · six product families, footer e-mail, four sustainability pillars
+   ================================================================= */
+.pgrid-6 { grid-template-columns: repeat(12, minmax(0, 1fr)); grid-template-rows: auto; }
+.pgrid-6 .pcard { grid-column: span 4; }
+.pgrid-6 .pcard.main { grid-column: 1 / span 8; grid-row: 1 / span 2; }
+.pgrid-6 .pcard:nth-child(2), .pgrid-6 .pcard:nth-child(3) { grid-column: 9 / span 4; }
+.pgrid-6 .pcard:not(.main) img { aspect-ratio: 16 / 10; }
+.pgrid-6 .pcard:not(.main) h3 { font-size: clamp(1.35rem, 2vw, 2rem); }
+@media (max-width: 900px) {
+  .pgrid-6 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pgrid-6 .pcard, .pgrid-6 .pcard.main, .pgrid-6 .pcard:nth-child(n) { grid-column: auto; grid-row: auto; }
+  .pgrid-6 .pcard.main { grid-column: 1 / -1; }
+}
+@media (max-width: 560px) { .pgrid-6 { grid-template-columns: 1fr; } }
+.cgrid-3 .pcard h3 { font-size: clamp(1.4rem, 2.1vw, 2.1rem); }
+.ftr-mail { color: var(--night-ink); font-size: 1rem; width: fit-content; background: linear-gradient(currentColor, currentColor) 0 100% / 100% 1px no-repeat; padding-bottom: 2px; }
+.ftr-mail:hover { color: var(--leaf); }
+.pillars-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 1100px) { .pillars-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px clamp(20px, 3vw, 44px); } }
+@media (max-width: 620px) { .pillars-4 { grid-template-columns: 1fr; } }
+#view { margin-top: -8px; }

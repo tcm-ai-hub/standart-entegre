@@ -50,15 +50,15 @@
 <footer class="ftr">
   <div class="ftr-grid px">
     <div class="ftr-brand"><a class="logo" href="{{ link(home_path) }}">{{ S.brand }}</a>
+      {% if S.company.email %}<a class="ftr-mail" href="mailto:{{ S.company.email }}">{{ S.company.email }}</a>{% endif %}
       <div class="langs ftr-langs">{% for a in page.alternates %}<a href="{{ a.rel }}" hreflang="{{ a.lang }}" lang="{{ a.lang }}"{% if a.lang == L.lang %} aria-current="true"{% endif %}>{{ a.name }}</a>{% endfor %}</div>
     </div>
     <div><h4>{{ L.footer.products }}</h4><ul>{% for p in products %}<li><a href="{{ link(p.path) }}">{{ p.t.name }}</a></li>{% endfor %}</ul></div>
     <div><h4>{{ L.footer.company }}</h4><ul><li><a href="{{ link(about_path) }}">{{ L.nav.about }}</a></li><li><a href="{{ link(home_path) }}#olcu">{{ L.nav.tool }}</a></li><li><a href="{{ link(home_path) }}#teklif">{{ L.nav.quote }}</a></li></ul></div>
     <div><h4>{{ L.footer.facility }}</h4><ul>
-      <li>{{ S.company.city }}</li>
+      {% for f in S.company.facilities %}<li>{{ f }}</li>{% endfor %}
       {% if S.company.address %}<li>{{ S.company.address }}</li>{% endif %}
       {% if S.company.phone %}<li dir="ltr">{{ S.company.phone }}</li>{% endif %}
-      {% if S.company.email %}<li>{{ S.company.email }}</li>{% endif %}
     </ul></div>
   </div>
   <div class="ftr-base px"><span>© <span id="yr">2026</span> {{ S.brand }}</span><span>{{ L.footer.design }}</span></div>

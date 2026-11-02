@@ -20,6 +20,7 @@
     <p class="eyebrow">{{ L.tech_eyebrow }}</p>
     <table class="spec">
       {% for r in t.spec %}<tr><th scope="row">{{ r[0] }}</th><td>{{ r[1] }}</td></tr>{% endfor %}
+      {% if S.standards.ispm15 %}<tr><th scope="row">{{ L.standards.label }}</th><td>{{ L.standards.ispm15 }}</td></tr>{% endif %}
     </table>
   </div>
   {% if t.sections %}

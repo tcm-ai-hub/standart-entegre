@@ -1,6 +1,6 @@
 # Standart Entegre · web sitesi
 
-Kablo sevk makarası, karton makara, ahşap palet, ihracat sandığı ve mermer kasası üreticisi Standart Entegre için 5 dilli statik B2B site (TR, EN, FR, AR, ES).
+Kablo sevk makarası, kontrplak makara, kit paket, katlanabilir ahşap kasa, ihracat sandığı ve mermer kasası üreticisi Standart Entegre için 5 dilli statik B2B site (TR, EN, FR, AR, ES).
 Tasarım ve geliştirme: TCM Global.
 
 ## Metinleri nereden düzenlerim?
@@ -18,7 +18,9 @@ Kod bilmeden, GitHub üzerinden dosyayı açıp kalem simgesiyle düzenleyebilir
 | Tarihçe (1963'ten bugüne) | dil dosyası → `heritage` (`timeline` satırları: [yıl, başlık, açıklama]) |
 | Sürdürülebilirlik, ağaç dikimi, geri dönüşüm metinleri | dil dosyası → `sustain` |
 | Ağaç dikimi rakamları (kurum, dikilen ağaç, başlangıç yılı) | `content/site.yml` → `planting` (boşsa görünmez) |
-| Makara ölçü aralığı (550–3200 mm) | `content/site.yml` → `reel_min_mm`, `reel_max_mm` |
+| Makara ölçü aralığı (55–320 cm) ve ara görünüş sınırı (228 cm) | `content/site.yml` → `reel_min_cm`, `reel_max_cm`, `reel_mid_cm` |
+| Üretim tesisleri (Gebze, Denizli) ve e-posta | `content/site.yml` → `company.facilities`, `company.email` |
+| ISPM 15 ve FSC bilgisini yayına almak | `content/site.yml` → `standards` (belge ve kapsam teyidinden sonra `true`) |
 | Teklif formunun gideceği adres | `content/site.yml` → `form_endpoint` |
 | Domain | `content/site.yml` → `base_url` |
 

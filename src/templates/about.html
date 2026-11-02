@@ -69,6 +69,18 @@
   </div>
 </section>
 
+{% if S.standards.ispm15 or S.standards.fsc %}
+<section class="sec px" style="padding-top:clamp(56px,7vw,110px)">
+  <div class="pp-body">
+    <p class="eyebrow">{{ L.standards.eyebrow }}</p>
+    <div class="subs">
+      {% if S.standards.ispm15 %}<article class="sub"><h2>ISPM 15</h2><p>{{ L.standards.ispm15_long }}</p></article>{% endif %}
+      {% if S.standards.fsc %}<article class="sub"><h2>FSC</h2><p>{{ L.standards.fsc_long }}</p></article>{% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
 {% if S.company.certificates %}
 <section class="sec px" style="padding-top:0">
   <div class="pp-body">

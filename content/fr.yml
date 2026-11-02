@@ -5,9 +5,10 @@ label: FR
 name: Français
 locale: fr-FR
 og_locale: fr_FR
-slugs: { products: produits, about: entreprise }
-arrow: "→"
-
+slugs:
+  products: produits
+  about: entreprise
+arrow: →
 nav:
   products: Produits
   about: Entreprise
@@ -18,387 +19,406 @@ nav:
   close: Fermer
   home: Accueil
   language: Langue
-
 meta:
-  home_title: "Standart Entegre · Tourets de câble en bois, bobines en carton, palettes et caisses à marbre"
-  home_desc: "Emballages en bois et tourets de câble depuis 1963. Tourets de câble en bois, bobines en carton, palettes, caisses d’exportation et caisses à marbre fabriqués en Turquie. Joues de 55 cm à 3,20 m."
-  products_title: "Produits · Tourets de câble, bobines en carton, palettes, caisses, caisses à marbre"
-  products_desc: "Produits Standart Entegre : tourets de câble en bois (55 cm – 3,20 m), bobines en carton, palettes en bois, caisses de transport et d’exportation, caisses à marbre."
-  about_title: "Entreprise · Standart Entegre"
-  about_desc: "Standart Entegre : une histoire dans les produits forestiers depuis 1946, la fabrication d’emballages en bois et de tourets de câble depuis 1963 et une approche respectueuse de la nature. Fabriqué à Gebze, Turquie."
-
+  home_title: "Standart Entegre · Tourets de câble en bois, tourets en contreplaqué, caisses pliables et caisses à marbre"
+  home_desc: "Emballages en bois et tourets de câble depuis 1963. Tourets de câble en bois et en contreplaqué, kits, caisses pliables en bois, caisses d’exportation et caisses à marbre fabriqués en Turquie. Joues de 55 cm à 320 cm."
+  products_title: "Produits · Tourets de câble, tourets en contreplaqué, kits, caisses pliables, caisses, caisses à marbre"
+  products_desc: "Produits Standart Entegre : tourets de câble en bois (55 – 320 cm), tourets en contreplaqué, kits / kits palettisés, caisses-palettes pliables en bois, caisses de transport et d’exportation, caisses à marbre."
+  about_title: Entreprise · Standart Entegre
+  about_desc: "Standart Entegre : une histoire dans les produits forestiers depuis 1946, la fabrication d’emballages en bois et de tourets de câble depuis 1963 et une approche respectueuse de la nature. Usines de Gebze et Denizli, Turquie."
 hero:
-  kicker: "Tourets en bois · Bobines en carton · Palettes · Caisses · Caisses à marbre"
-  place: "Gebze, Turquie"
-  h1: "De l’arbre à l’expédition, depuis 1963"
-  lead: "Des tourets de câble et bobines en carton aux palettes, caisses d’exportation et caisses à marbre. Nous transformons le bois, matériau renouvelable de la nature, en solutions d’expédition pour l’industrie."
-  cta_products: "Voir les produits"
-  cta_quote: "Demander un devis"
-  scroll: "Démontez le touret"
-  parts_h: "Chaque touret est dimensionné pour votre câble."
+  kicker: "Tourets en bois · Tourets en contreplaqué · Kits · Caisses pliables · Caisses · Caisses à marbre"
+  place: Gebze · Denizli, Turquie
+  h1: De l’arbre à l’expédition, depuis 1963
+  lead: "Des tourets de câble en bois et en contreplaqué et des kits aux caisses pliables, caisses d’exportation et caisses à marbre. Nous transformons le bois, matériau renouvelable de la nature, en solutions d’expédition pour l’industrie."
+  cta_products: Voir les produits
+  cta_quote: Demander un devis
+  scroll: Démontez le touret
+  parts_h: Chaque touret est dimensionné pour votre câble.
   parts_p: "Le diamètre des joues, le diamètre du fût et la largeur utile dépendent de la section du câble, de sa longueur et du mode d’expédition."
   callouts:
-    flange: ["Joue", "Ø 55 cm – 3,20 m"]
-    drum: ["Fût", "Le corps sur lequel s’enroule le câble"]
-    rod: ["Tiges de serrage", "Fixent les joues au fût"]
-    hole: ["Alésage central", "Pour l’enrouleur et le dérouleur"]
-  canvas_label: "Modèle 3D d’un touret de câble en bois"
-
+    flange: [Joue, Ø 55 cm – 320 cm]
+    drum: [Fût, Le corps sur lequel s’enroule le câble]
+    rod: [Tiges de serrage, Fixent les joues au fût]
+    hole: [Alésage central, Pour l’enrouleur et le dérouleur]
+  canvas_label: Modèle 3D d’un touret de câble en bois
 home:
-  products_eyebrow: "Produits"
-  products_h: ["Du touret à la caisse à marbre,", "une seule chaîne de production."]
-  products_intro: "Nous fabriquons des tourets de câble en bois et des bobines en carton pour les câbliers, ainsi que des palettes, caisses de transport et caisses à marbre pour l’expédition industrielle et l’export. Nos tourets en bois vont de 55 cm à 3,20 m de diamètre de joue."
-  all_products: "Tous les produits"
-  tool_eyebrow: "Taille de bobine"
-  tool_h: ["Visualisez la taille,", "planifiez l’expédition."]
+  products_eyebrow: Produits
+  products_h: ['Du touret à la caisse à marbre,', une seule chaîne de production.]
+  products_intro: "Nous fabriquons des tourets de câble en bois et en contreplaqué et des pièces de tourets en kit pour les câbliers, ainsi que des caisses pliables en bois, des caisses de transport et des caisses à marbre pour l’expédition industrielle et l’export. Nos tourets de câble en bois vont de 55 cm à 320 cm de diamètre de joue."
+  all_products: Tous les produits
+  tool_eyebrow: Taille de bobine
+  tool_h: ['Visualisez la taille,', planifiez l’expédition.]
   uses:
-    - ["Énergie", "Câbles moyenne et haute tension"]
-    - ["Télécoms", "Câbles de communication et de données"]
-    - ["Fibre optique", "Câbles à enroulement délicat"]
-    - ["Marbre et pierre", "Expédition de tranches et de blocs"]
-  about_eyebrow: "Entreprise"
-  about_h: "De la grume à l’expédition, sous un même toit."
-  about_more: "Découvrir l’entreprise"
-
+  - [Énergie, Câbles moyenne et haute tension]
+  - [Télécommunications, Câbles de communication et de données]
+  - [Fibre optique, Câbles à enroulement délicat]
+  - [Marbre et pierre, Expédition de tranches et de blocs]
+  about_eyebrow: Entreprise
+  about_h: De la grume à l’expédition, sous un même toit.
+  about_more: Découvrir l’entreprise
 categories:
   makaralar:
-    name: "Tourets et bobines"
-    desc: "Tourets en bois et bobines en carton pour câbles, fils et cordages."
+    name: Tourets et bobines
+    desc: "Tourets en bois et en contreplaqué pour câbles, fils et câbles d’acier ; pièces de tourets en kit."
   ambalaj:
-    name: "Emballage bois"
-    desc: "Palettes, caisses et caisses à marbre pour le stockage, la logistique et l’export."
-
+    name: Emballage bois
+    desc: "Caisses pliables, caisses et caisses à marbre pour le stockage, la logistique et l’export."
 products:
   makara:
     slug: tourets-de-cable-en-bois
-    name: "Tourets de câble en bois"
-    card: "Tourets d’expédition de câble. Ø 55 cm – 3,20 m. Pour câbles d’énergie, télécoms, fibre optique et câbles d’acier."
-    tag: "Gamme principale · Ø 55 cm – 3,20 m"
-    title: "Tourets de câble en bois · 55 cm – 3,20 m | Standart Entegre"
-    desc: "Tourets de câble en bois, joues de 55 cm à 3,20 m. Tourets standard et sur mesure pour câbles d’énergie, télécoms, fibre optique et câbles d’acier."
-    h1: "Tourets de câble en bois"
-    lead: "Tourets en bois avec des joues de 55 cm jusqu’à 3,20 m de diamètre, pour l’enroulement, le stockage et le transport des câbles d’énergie, télécoms et fibre optique et des câbles d’acier."
+    name: Tourets de câble en bois
+    card: "Tourets d’expédition de câble. Ø 55 cm – 320 cm. Pour câbles d’énergie, télécommunications, fibre optique et câbles d’acier."
+    tag: Gamme principale · Ø 55 cm – 320 cm
+    title: Tourets de câble en bois · 55 cm – 320 cm | Standart Entegre
+    desc: "Tourets de câble en bois, joues de 55 cm à 320 cm. Tourets standard et sur mesure pour câbles d’énergie, télécommunications, fibre optique et câbles d’acier."
+    h1: Tourets de câble en bois
+    lead: "Tourets en bois avec des joues de 55 cm jusqu’à 320 cm de diamètre, pour l’enroulement, le stockage et le transport des câbles d’énergie, télécommunications et fibre optique et des câbles d’acier."
     image_alt: "Éléments d’un touret de câble en bois : deux joues, le fût et les tiges de serrage"
-    card_alt: "Touret de câble en bois"
+    card_alt: Touret de câble en bois
     facts:
-      - ["Ø 55 cm – 3,20 m", "Diamètre des joues"]
-      - ["4", "Types de câble : énergie, télécoms, fibre optique, acier"]
-      - ["Standard et sur mesure", "Séries et fabrication par projet"]
+    - [Ø 55 cm – 320 cm, Diamètre des joues]
+    - ['4', "Types de câble : énergie, télécommunications, fibre optique, acier"]
+    - [Standard et sur mesure, Séries et fabrication par projet]
     spec:
-      - ["Diamètre des joues", "55 cm – 3,20 m (550 – 3200 mm)"]
-      - ["Usage", "Câbles d’énergie, télécoms et fibre optique ; câbles et fils d’acier"]
-      - ["Dimensions", "Tailles standard ou sur mesure selon le câble"]
-      - ["Dimensionnement", "Section du câble, longueur totale, rayon de courbure et mode d’expédition"]
-      - ["Production", "Usine de Gebze"]
+    - [Diamètre des joues, 55 – 320 cm]
+    - [Usage, "Câbles d’énergie, télécommunications et fibre optique ; câbles et fils d’acier"]
+    - [Dimensions, Tailles standard ou sur mesure selon le câble]
+    - [Dimensionnement, "Section du câble, longueur totale, rayon de courbure et mode d’expédition"]
+    - [Production, Usines de Gebze et Denizli]
     sections:
-      - id: enerji
-        h: "Tourets pour câbles d’énergie"
-        p: "Les câbles moyenne et haute tension sont lourds et de forte section. Nous fabriquons pour eux des tourets en bois à haute capacité, jusqu’à 3,20 m de diamètre de joue."
-      - id: telekom
-        h: "Tourets pour câbles télécoms"
-        p: "Tourets en bois de taille moyenne pour câbles de communication et de données. À partir de 55 cm de diamètre de joue, dimensionnés selon la longueur du câble."
-      - id: fiber
-        h: "Tourets pour câbles à fibre optique"
-        p: "La fibre optique est sensible à la courbure. Le diamètre du fût est défini selon le rayon de courbure minimal, avec une surface d’enroulement régulière."
-      - id: celik-halat
-        h: "Tourets pour câbles et fils d’acier"
-        p: "Tourets en bois à joues et fût renforcés pour les enroulements denses et lourds."
-      - id: standart-makara
-        h: "Tourets standard et dimensions sur mesure"
-        p: "Les séries de tourets standard dans les tailles courantes réduisent les délais pour les commandes répétées. Si votre câble sort des tailles standard, joues, fût et largeur sont définis pour le projet."
-      - id: agac-makara
-        h: "Touret, bobine, tambour de câble"
-        p: "Le secteur emploie plusieurs noms pour le même produit : touret, bobine ou tambour de câble, composé de joues et d’un fût en bois assemblés par des tiges."
+    - id: enerji
+      h: Tourets pour câbles d’énergie
+      p: "Les câbles moyenne et haute tension sont lourds et de forte section. Nous fabriquons pour eux des tourets en bois à haute capacité, jusqu’à 320 cm de diamètre de joue."
+    - id: telekom
+      h: Tourets pour câbles télécommunications
+      p: "Tourets en bois de taille moyenne pour câbles de communication et de données. À partir de 55 cm de diamètre de joue, dimensionnés selon la longueur du câble."
+    - id: fiber
+      h: Tourets pour câbles à fibre optique
+      p: "La fibre optique est sensible à la courbure. Le diamètre du fût est défini selon le rayon de courbure minimal, avec une surface d’enroulement régulière."
+    - id: celik-halat
+      h: Tourets pour câbles et fils d’acier
+      p: "Tourets en bois à joues et fût renforcés pour les enroulements denses et lourds."
+    - id: standart-makara
+      h: Tourets standard et dimensions sur mesure
+      p: "Les séries de tourets standard dans les tailles courantes réduisent les délais pour les commandes répétées. Si votre câble sort des tailles standard, joues, fût et largeur sont définis pour le projet."
+    - id: agac-makara
+      h: Touret, bobine, tambour de câble
+      p: "Le secteur emploie plusieurs noms pour le même produit : touret, bobine ou tambour de câble, composé de joues et d’un fût en bois assemblés par des tiges."
     faq:
-      - ["Quelles tailles de tourets fabriquez-vous ?", "Nous fabriquons des tourets de câble en bois avec des joues de 55 cm jusqu’à 3,20 m de diamètre."]
-      - ["De quelles informations avez-vous besoin pour un devis ?", "Type de câble, diamètre extérieur, longueur totale, diamètre de joue souhaité s’il est connu, et quantité. Joignez un plan si vous en avez un."]
-      - ["Les grands tourets entrent-ils dans un conteneur ?", "La porte d’un conteneur standard mesure environ 2,28 m de haut, celle d’un high-cube environ 2,58 m. Au-delà, un transport open-top ou flat-rack peut être nécessaire."]
-    tool_link: "Ouvrir l’outil de dimensionnement"
-
-  karton:
-    slug: bobines-en-carton
-    name: "Bobines en carton"
-    card: "Bobines en carton pour câbles légers, fils et tuyaux."
-    tag: "Pour enroulements légers"
-    title: "Bobines en carton · Tourets carton | Standart Entegre"
-    desc: "Bobines en carton à fût en tube carton pour câbles légers, fils, tuyaux et bandes. Une alternative légère et économique aux tourets en bois."
-    h1: "Bobines en carton"
-    lead: "Bobines à fût en carton pour l’enroulement de câbles légers, fils, tuyaux et bandes. Plus légères qu’un touret en bois et économiques pour les envois sans retour."
-    image_alt: "Deux bobines en carton avec fût en tube carton et joues en carton pressé"
-    card_alt: "Bobine en carton"
+    - ['Quelles tailles de tourets fabriquez-vous ?', "Nous fabriquons des tourets de câble en bois avec des joues de 55 cm jusqu’à 320 cm de diamètre."]
+    - ['De quelles informations avez-vous besoin pour un devis ?', "Type de câble, diamètre extérieur, longueur totale, diamètre de joue souhaité s’il est connu, et quantité. Joignez un plan si vous en avez un."]
+    - - Les grands tourets entrent-ils dans un conteneur ?
+      - "La porte d’un conteneur standard mesure environ 228 cm de haut, celle d’un high-cube environ 258 cm. Au-delà, un transport open-top ou flat-rack peut être nécessaire."
+    tool_link: Ouvrir l’outil de dimensionnement
+  kontrplak:
+    slug: tourets-contreplaque
+    name: Tourets en contreplaqué
+    card: "Tourets de câble à joues en contreplaqué. Pour câbles à fibre optique, de données et de télécommunications, fils et enroulements légers."
+    tag: Pour enroulements légers et moyens
+    title: "Tourets en contreplaqué · Fabricant de tourets de câble | Standart Entegre"
+    desc: "Tourets en contreplaqué : tourets de câble à joues en contreplaqué pour câbles à fibre optique, de données et de télécommunications, fils et enroulements légers, sur mesure."
+    h1: Tourets en contreplaqué
+    lead: "Tourets de câble à joues en contreplaqué. Une surface lisse pour câbles à fibre optique, de données et de télécommunications, fils et enroulements légers."
+    image_alt: Deux tourets de câble à joues en contreplaqué (illustration)
+    card_alt: Touret en contreplaqué
     facts:
-      - ["Légère", "Faible poids d’emballage"]
-      - ["Économique", "Pour les envois sans retour"]
-      - ["Sur mesure", "Fût et joues selon le produit"]
+    - [Joues en contreplaqué, Surface lisse et résistante]
+    - [Sur mesure, Joues et fût selon le produit]
+    - [Fibre · données · fil, Enroulements sensibles et légers]
     spec:
-      - ["Fût", "Tube en carton"]
-      - ["Usage", "Câbles légers, fils, tuyaux, bandes et produits similaires"]
-      - ["Dimensionnement", "Diamètre, longueur et poids du produit enroulé"]
-      - ["Production", "Usine de Gebze"]
+    - [Joues, Contreplaqué]
+    - [Usage, "Câbles à fibre optique, de données et de télécommunications ; fils et enroulements légers"]
+    - [Dimensionnement, 'Selon le diamètre, la longueur et le poids du produit']
+    - [Production, Usines de Gebze et Denizli]
     sections:
-      - id: kullanim
-        h: "Où utilise-t-on les bobines en carton ?"
-        p: "Pour les produits légers et longs : câbles fins, fils, tuyaux et bandes. Les câbles d’énergie lourds voyagent sur des tourets en bois."
-      - id: ahsap-karsilastirma
-        h: "Carton ou bois ?"
-        p: "Les bobines en carton sont légères et économiques ; les tourets en bois conviennent aux charges lourdes, aux grands diamètres et à la réutilisation. Nous vous aidons à choisir."
+    - id: usage
+      h: Où utilise-t-on les tourets en contreplaqué ?
+      p: "Pour les câbles à fibre optique et de données qui demandent une surface d’enroulement lisse, ainsi que pour les fils et enroulements légers. Pour les câbles d’énergie lourds et les grands diamètres, on choisit les tourets de câble en bois."
+    - id: bois-contreplaque
+      h: Touret en contreplaqué ou en bois ?
+      p: "Les tourets en contreplaqué ont une surface lisse et conviennent aux enroulements légers ; les tourets en bois sont destinés aux charges lourdes et aux grands diamètres jusqu’à 320 cm. Nous vous aidons à choisir."
     faq: []
-
-  palet:
-    slug: palettes-en-bois
-    name: "Palettes en bois"
-    card: "Palettes EUR et palettes sur mesure pour le stockage, la logistique et l’export."
-    tag: "EUR et sur mesure"
-    title: "Palettes en bois · Palettes EUR et sur mesure | Standart Entegre"
-    desc: "Fabrication de palettes en bois : palettes EUR 1200 × 800 mm et palettes sur mesure pour le stockage, la logistique interne et l’export."
-    h1: "Palettes en bois"
-    lead: "Palettes en bois au format EUR et sur mesure selon votre charge. Pour le stockage, la logistique interne et l’expédition à l’export."
-    image_alt: "Palette EUR en bois"
-    card_alt: "Palette EUR en bois"
+  kit:
+    slug: kit-tourets-palette
+    name: Kit / Kit palettisé
+    card: "Joues et pièces de fût de tourets livrées en kit sur palette, pour montage dans votre usine."
+    tag: Expédition en pièces
+    title: Kit de tourets · Kit palettisé | Standart Entegre
+    desc: "Kit / kit palettisé : joues de tourets de câble en bois, pièces de fût et visserie expédiées en kit sur palette pour montage dans votre usine."
+    h1: Kit / kit palettisé
+    lead: "Les joues, les pièces de fût et la visserie sont expédiées démontées, en kit sur palette. Les tourets sont montés dans votre usine, au moment voulu."
+    image_alt: "Joues de tourets et pièces de fût cerclées sur une palette (illustration)"
+    card_alt: Kit de pièces de tourets
     facts:
-      - ["1200 × 800 mm", "Format EUR"]
-      - ["Sur mesure", "Selon l’empreinte et le poids de la charge"]
-      - ["Chariot élévateur", "Entrée quatre côtés"]
+    - [Démonté, 'Joues, pièces de fût et visserie']
+    - [Sur palette, Kit cerclé]
+    - [Montage sur site, Au moment voulu]
     spec:
-      - ["Types", "Palette EUR, palette sur mesure"]
-      - ["Format EUR", "1200 × 800 × 144 mm"]
-      - ["Usage", "Stockage, logistique interne, export"]
-      - ["Production", "Usine de Gebze"]
+    - [Contenu, 'Joues, pièces de fût et visserie']
+    - [Expédition, Kit cerclé sur palette]
+    - [Usage, Entreprises qui montent leurs tourets sur leur site]
+    - [Production, Usines de Gebze et Denizli]
     sections:
-      - id: ozel-olcu
-        h: "Palettes sur mesure"
-        p: "En plus du format EUR, nous fabriquons des palettes selon le poids de la charge, son empreinte et le sens d’entrée des fourches."
+    - id: pourquoi-kit
+      h: Pourquoi expédier en kit ?
+      p: "Les tourets montés occupent beaucoup de volume au transport. En kit, un même camion transporte plus de tourets, le stockage demande moins de place et les tourets sont montés au moment voulu."
     faq: []
-
+  katlanabilir:
+    slug: caisse-palette-pliable-bois
+    name: Caisse-palette pliable en bois
+    card: "Une caisse formée de cadres en bois à charnières sur palette, qui se replie à plat une fois vide."
+    tag: Pliable · empilable
+    title: "Caisse-palette pliable en bois · Rehausse de palette | Standart Entegre"
+    desc: "Caisse-palette pliable en bois : cadres en bois à charnières sur palette, qui se replient à plat une fois vides pour gagner de la place au retour."
+    h1: Caisse-palette pliable en bois
+    lead: "Un système de caisse composé de cadres en bois à charnières empilés sur une palette. On ajoute des cadres selon la hauteur de la charge ; une fois vide, les cadres se replient et s’empilent à plat."
+    image_alt: "Caisse en bois à trois cadres à charnières sur palette et cadres repliés à côté (illustration)"
+    card_alt: Caisse pliable en bois
+    facts:
+    - [Cadres à charnières, Pliage aux angles]
+    - [Hauteur modulaire, Cadres ajoutés selon la charge]
+    - [Empilage à plat, Gain de place au retour à vide]
+    spec:
+    - [Construction, Cadres en bois à charnières posés sur une palette]
+    - [Hauteur, Selon le nombre de cadres]
+    - [Usage, 'Stockage, logistique interne et expéditions réutilisables']
+    - [Production, Usines de Gebze et Denizli]
+    sections:
+    - id: pliage
+      h: Comment se plie-t-elle et s’expédie-t-elle ?
+      p: "Chaque cadre se compose de quatre panneaux en bois reliés par des charnières aux angles. En service, les cadres s’empilent sur la palette ; une fois la caisse vide, ils se replient et s’empilent à plat, de sorte que le retour des caisses vides prend beaucoup moins de place."
+    - id: dimensions
+      h: Dimensions et hauteur
+      p: "L’empreinte suit la palette, la hauteur dépend du nombre de cadres empilés. Indiquez-nous la taille et la hauteur souhaitées."
+    faq: []
   sandik:
     slug: caisses-export
-    name: "Caisses de transport et d’exportation"
+    name: Caisses de transport et d’exportation
     card: "Caisses en bois sur mesure pour machines, équipements et charges à l’export."
-    tag: "Sur mesure"
+    tag: Sur mesure
     title: "Caisses en bois d’exportation · Caisses de transport | Standart Entegre"
     desc: "Caisses en bois de transport et d’exportation pour machines, équipements et marchandises : sur patins, cadrées et fabriquées aux dimensions de la charge."
-    h1: "Caisses de transport et d’exportation"
+    h1: Caisses de transport et d’exportation
     lead: "Caisses en bois fabriquées sur mesure pour machines, équipements et charges à l’export. Elles protègent la charge et facilitent le gerbage et la manutention."
     image_alt: "Caisse en bois fermée sur patins, avec cadre et contreventements"
-    card_alt: "Caisse en bois d’exportation"
+    card_alt: Caisse en bois d’exportation
     facts:
-      - ["Sur mesure", "Selon dimensions et poids de la charge"]
-      - ["Patins", "Manutention au chariot"]
-      - ["Fermée / claire-voie", "Type de caisse selon la charge"]
+    - [Sur mesure, Selon dimensions et poids de la charge]
+    - [Patins, Manutention au chariot]
+    - [Fermée / claire-voie, Type de caisse selon la charge]
     spec:
-      - ["Production", "Aux dimensions et au poids de la charge"]
-      - ["Types", "Caisse fermée, caisse à claire-voie"]
-      - ["Usage", "Machines, équipements et charges à l’export"]
-      - ["Manutention", "Patins compatibles chariot élévateur"]
+    - [Production, Aux dimensions et au poids de la charge]
+    - [Types, 'Caisse fermée, caisse à claire-voie']
+    - [Usage, 'Machines, équipements et charges à l’export']
+    - [Manutention, Patins compatibles chariot élévateur]
     sections:
-      - id: olculendirme
-        h: "Comment dimensionner une caisse ?"
-        p: "La taille et la structure dépendent des dimensions, du poids, du centre de gravité de la charge et de l’itinéraire. Communiquez-nous les dimensions et un plan si possible."
+    - id: olculendirme
+      h: Comment dimensionner une caisse ?
+      p: "La taille et la structure dépendent des dimensions, du poids, du centre de gravité de la charge et de l’itinéraire. Communiquez-nous les dimensions et un plan si possible."
     faq: []
-
   mermer:
     slug: caisses-a-marbre
-    name: "Caisses à marbre"
+    name: Caisses à marbre
     card: "Caisses en bois pour l’expédition sûre des tranches de marbre et de pierre."
-    tag: "Expédition de pierre naturelle"
+    tag: Expédition de pierre naturelle
     title: "Caisses à marbre · Caisses en bois pour tranches | Standart Entegre"
     desc: "Fabrication de caisses à marbre : caisses en bois sur patins et contreventées pour l’expédition de tranches de marbre, granit et pierre naturelle."
-    h1: "Caisses à marbre"
+    h1: Caisses à marbre
     lead: "Caisses en bois pour l’expédition de tranches de marbre, de granit et de pierre naturelle. Elles maintiennent les tranches debout et se manutentionnent au chariot."
     image_alt: "Caisse à marbre ouverte en bois avec des tranches de marbre debout"
-    card_alt: "Caisse à marbre en bois"
+    card_alt: Caisse à marbre en bois
     facts:
-      - ["Selon la tranche", "Longueur et hauteur de caisse"]
-      - ["Patins", "Chargement au chariot"]
-      - ["Cadre contreventé", "Garde sa forme sous charge"]
+    - [Selon la tranche, Longueur et hauteur de caisse]
+    - [Patins, Chargement au chariot]
+    - [Cadre contreventé, Garde sa forme sous charge]
     spec:
-      - ["Usage", "Tranches de marbre, granit et pierre naturelle"]
-      - ["Structure", "Patins, montants, lisses et contreventements"]
-      - ["Dimensionnement", "Taille, épaisseur et nombre de tranches"]
-      - ["Expédition", "National et export"]
+    - [Usage, 'Tranches de marbre, granit et pierre naturelle']
+    - [Structure, 'Patins, montants, lisses et contreventements']
+    - [Dimensionnement, 'Taille, épaisseur et nombre de tranches']
+    - [Expédition, National et export]
     sections:
-      - id: mermer-sandigi
-        h: "Caisse à marbre ouverte ou fermée"
-        p: "La caisse à marbre est généralement un cadre ouvert à claire-voie qui transporte les tranches debout. La caisse fermée convient aux surfaces sensibles et aux longs trajets. Nous fabriquons les deux à la taille de vos tranches."
+    - id: mermer-sandigi
+      h: Caisse à marbre ouverte ou fermée
+      p: "La caisse à marbre est généralement un cadre ouvert à claire-voie qui transporte les tranches debout. La caisse fermée convient aux surfaces sensibles et aux longs trajets. Nous fabriquons les deux à la taille de vos tranches."
     faq:
-      - ["De quoi avez-vous besoin pour un devis de caisse à marbre ?", "Longueur, hauteur et épaisseur des tranches, nombre de tranches par caisse et mode d’expédition (national, conteneur, camion ouvert)."]
-
+    - ['De quoi avez-vous besoin pour un devis de caisse à marbre ?', "Longueur, hauteur et épaisseur des tranches, nombre de tranches par caisse et mode d’expédition (national, conteneur, camion ouvert)."]
 tool:
-  label: "Diamètre des joues"
-  aria: "Diamètre des joues en millimètres"
-  cable_legend: "Type de câble"
-  cables: ["Énergie", "Télécoms", "Fibre optique", "Câble d’acier"]
-  cable_values: ["Câble d’énergie", "Câble télécom", "Câble à fibre optique", "Câble / fil d’acier"]
-  cta: "Demander un devis pour cette taille"
-  svg_title: "Diamètre de touret choisi, à l’échelle d’une personne de 1,75 m et des portes de conteneur"
+  label: Diamètre des joues
+  aria: Diamètre de joue, centimètres
+  cable_legend: Type de câble
+  cables: [Énergie, Télécommunications, Fibre optique, Câble d’acier]
+  cable_values: [Câble d’énergie, Câble télécommunications, Câble à fibre optique, Câble / fil d’acier]
+  cta: Demander un devis pour cette taille
+  svg_title: "Diamètre de touret choisi, à l’échelle d’une personne de 175 cm et des portes de conteneur"
   fine: "Dessin à l’échelle. Les dimensions des portes de conteneur sont approximatives ; consultez notre équipe pour planifier l’expédition."
-
+  view_legend: Vue
+  view_full: 55 – 320 cm
+  view_mid: Vue rapprochée · jusqu’à 228 cm
 about:
-  h1: "Depuis 1963, de l’arbre à l’expédition."
+  h1: Depuis 1963, de l’arbre à l’expédition.
   lead: "Standart Entegre est un fabricant intégré d’emballages en bois qui réunit un long héritage industriel, une vision moderne de l’industrie et une approche respectueuse de la nature."
-  story_eyebrow: "Notre histoire"
+  story_eyebrow: Notre histoire
   story:
-    - "L’histoire de notre entreprise dans les produits forestiers remonte à 1946, et notre fabrication d’emballages en bois et de tourets de câble à 1963. Depuis, à travers nos différentes sociétés, nous avons fabriqué des tourets de câble, des palettes en bois et des caisses à boissons, en répondant aux besoins d’expédition croissants de l’industrie turque."
-    - "« Entegre » signifie intégré, et décrit notre façon de travailler. Le sciage des grumes, la préparation du bois, la fabrication des tourets et des caisses et l’expédition se font au sein d’une même structure. Nous préparons notre matière première en sciant nous-mêmes les grumes, et importons aussi des planches et des blocs compressés."
-    - "Dans notre usine de Gebze, nous fabriquons des tourets de câble en bois, des bobines en carton, des palettes, des caisses de transport et d’exportation et des caisses à marbre. Nos clients sont des câbliers énergie et télécoms, des fabricants de câbles et fils d’acier, des entreprises du marbre et de la pierre naturelle et des industriels exportateurs."
-    - "Chaque commande part de la charge : la section et la longueur du câble, la taille des tranches, le poids de la machine. Nous fabriquons des tourets en bois de 55 cm à 3,20 m de diamètre de joue, en tailles standard comme sur mesure."
-  history_eyebrow: "Historique"
-  facility_eyebrow: "Usine et capacité"
+  - "L’histoire de notre entreprise dans les produits forestiers remonte à 1946, et notre fabrication d’emballages en bois et de tourets de câble à 1963. Depuis, à travers nos différentes sociétés, nous avons fabriqué des tourets de câble, des palettes en bois et des caisses à boissons, en répondant aux besoins d’expédition croissants de l’industrie turque."
+  - "« Entegre » signifie intégré, et décrit notre façon de travailler. Le sciage des grumes, la préparation du bois, la fabrication des tourets et des caisses et l’expédition se font au sein d’une même structure. Nous préparons notre matière première en sciant nous-mêmes les grumes, et importons aussi des planches et des blocs compressés."
+  - "Dans nos usines de Gebze et Denizli, nous fabriquons des tourets de câble en bois et en contreplaqué, des pièces de tourets en kit, des caisses pliables en bois, des caisses de transport et d’exportation et des caisses à marbre. Nos clients sont des câbliers énergie et télécommunications, des fabricants de câbles d’acier et de fils, des entreprises du marbre et de la pierre naturelle et des industriels exportateurs."
+  - "Chaque commande part de la charge : la section et la longueur du câble, la taille des tranches, le poids de la machine. Nous fabriquons des tourets en bois de 55 cm à 320 cm de diamètre de joue, en tailles standard comme sur mesure."
+  history_eyebrow: Historique
+  facility_eyebrow: Usine et capacité
   facts_fixed:
-    - ["1946", "Nos racines dans les produits forestiers"]
-    - ["1963", "Début des emballages en bois et des tourets de câble"]
-    - ["60+ ans", "D’expérience en emballages en bois et tourets de câble"]
-    - ["Ø 55 cm – 3,20 m", "Diamètre des joues"]
-    - ["5", "Familles de produits"]
-    - ["Gebze", "Site de production"]
+  - ['1946', Nos racines dans les produits forestiers]
+  - ['1963', Début des emballages en bois et des tourets de câble]
+  - [60+ ans, D’expérience en emballages en bois et tourets de câble]
+  - [Ø 55 cm – 320 cm, Diamètre des joues]
+  - ['6', Familles de produits]
+  - [Gebze · Denizli, Usines de production]
   facts_labels:
-    founded: "Création"
-    facility_area_m2: "Surface (m²)"
-    lumber_m3_year: "Bois par an (m³)"
-    reels_year: "Tourets par an"
-    employees: "Salariés"
-  process_eyebrow: "Processus de production"
+    founded: Création
+    facility_area_m2: Surface (m²)
+    lumber_m3_year: Bois par an (m³)
+    reels_year: Tourets par an
+    employees: Salariés
+  process_eyebrow: Processus de production
   process:
-    - ["Grumes et matière première", "Réception et tri des grumes ; planches et blocs compressés importés."]
-    - ["Sciage", "Grumes débitées à dimension ; préparation du bois."]
-    - ["Fabrication", "Joues, fûts, palettes, caisses et caisses à marbre ; assemblage."]
-    - ["Contrôle", "Contrôle des dimensions, des assemblages et du montage."]
-    - ["Expédition", "Livraison prête au chargement, en national et à l’export."]
-  certs_eyebrow: "Certificats"
-  cta_h: "Trouvons ensemble le bon produit pour votre projet."
-
+  - [Grumes et matière première, "Réception et tri des grumes ; planches et blocs compressés importés."]
+  - [Sciage, Grumes débitées à dimension ; préparation du bois.]
+  - [Fabrication, 'Fabrication et assemblage des joues, fûts, caisses et kits.']
+  - [Contrôle, 'Contrôle des dimensions, des assemblages et du montage.']
+  - [Expédition, 'Livraison prête au chargement, en national et à l’export.']
+  certs_eyebrow: Certificats
+  cta_h: Trouvons ensemble le bon produit pour votre projet.
 gallery:
-  orman: "La forêt, source de notre matière première"
-  tomruk: "Parc à grumes"
-  kesim: "Sciage des grumes"
-  kereste: "Bois empilé pour le séchage"
-  makara: "Tourets de câble en bois"
-  palet: "Stock de palettes en bois"
-gallery_note: "Images d’illustration."
-
+  orman: La forêt, source de notre matière première
+  tomruk: Parc à grumes
+  kesim: Sciage des grumes
+  kereste: Bois empilé pour le séchage
+  makara: Tourets de câble en bois
+  palet: Stock de palettes en bois
+gallery_note: Images d’illustration.
 heritage:
-  eyebrow: "Entreprise · Depuis 1963"
+  eyebrow: Entreprise · Depuis 1963
   year_caption: "L’année où nous avons commencé à fabriquer emballages en bois et tourets de câble"
   h: "Un long héritage industriel, une vision moderne de l’industrie."
   story:
-    - "L’histoire de notre entreprise dans les produits forestiers remonte à 1946. En 1963, nous avons commencé à fabriquer des emballages en bois et des tourets de câble ; au fil des années, à travers nos différentes sociétés, nous avons fabriqué tourets, palettes en bois et caisses à boissons, en grandissant avec les besoins d’expédition de l’industrie."
-    - "Aujourd’hui, nous poursuivons ce savoir-faire sous le nom de Standart Entegre. Dans notre usine de Gebze, une chaîne intégrée de la grume à l’expédition produit tourets, bobines en carton, palettes, caisses et caisses à marbre."
-  # Ara yıllar netleşince "Sonraki yıllar" yerine yıl yazın veya yeni satır ekleyin: [yıl, başlık, açıklama]
+  - "L’histoire de notre entreprise dans les produits forestiers remonte à 1946. En 1963, nous avons commencé à fabriquer des emballages en bois et des tourets de câble ; au fil des années, à travers nos différentes sociétés, nous avons fabriqué tourets, palettes en bois et caisses à boissons, en grandissant avec les besoins d’expédition de l’industrie."
+  - "Aujourd’hui, nous poursuivons ce savoir-faire sous le nom de Standart Entegre. Dans nos usines de Gebze et Denizli, une chaîne intégrée de la grume à l’expédition produit tourets en bois et en contreplaqué, kits, caisses pliables, caisses et caisses à marbre."
   timeline:
-    - ["1946", "Produits forestiers", "Le début de l’histoire de notre entreprise dans les produits forestiers."]
-    - ["1963", "Emballages en bois et tourets", "Début de la fabrication d’emballages en bois et de tourets de câble."]
-    - ["Les années suivantes", "Caisses, tourets, palettes", "Caisses à boissons, tourets de câble et palettes en bois, fabriqués par nos différentes sociétés."]
-    - ["Aujourd’hui", "Standart Entegre", "Production intégrée de la grume à l’expédition ; cinq familles de produits, marché intérieur et export."]
-  more: "Lire notre histoire"
-
+  - ['1946', Produits forestiers, "Le début de l’histoire de notre entreprise dans les produits forestiers."]
+  - ['1963', Emballages en bois et tourets, "Début de la fabrication d’emballages en bois et de tourets de câble."]
+  - [Les années suivantes, 'Caisses, tourets, palettes', "Caisses à boissons, tourets de câble et palettes en bois, fabriqués par nos différentes sociétés."]
+  - [Aujourd’hui, Standart Entegre, "Production intégrée de la grume à l’expédition ; six familles de produits à Gebze et Denizli, marché intérieur et export."]
+  more: Lire notre histoire
 sustain:
-  eyebrow: "Nature et durabilité"
-  h: ["Le bois, matériau renouvelable de la nature.", "Nous le travaillons de façon responsable."]
+  eyebrow: Nature et durabilité
+  h: ['Le bois, matériau renouvelable de la nature.', Nous le travaillons de façon responsable.]
   lead: "Notre matière première vient de la forêt. À chaque étape de la production, nous tenons compte de notre responsabilité envers la nature : utiliser la matière avec efficacité, fabriquer des produits durables et rendre à la nature."
   pillars:
-    - ["Matière renouvelable", "Bien gérée, la forêt se renouvelle. De la découpe à la fabrication, nous utilisons la matière avec efficacité et réduisons les chutes au minimum."]
-    - ["Réemploi et recyclage", "Les tourets et palettes en bois se réutilisent de nombreuses fois. Nous œuvrons au recyclage du bois en fin de vie."]
-    - ["Des arbres pour nos clients", "Chaque année, nous plantons des arbres au nom de nos clients, pour rendre à la nature le bois que nous utilisons."]
-  more: "Découvrir notre démarche"
-  planting_eyebrow: "Responsabilité sociale"
-  planting_h: "Chaque année, des arbres au nom de nos clients."
-  # Kurum ve uygulama detayları netleşince bu iki metni güncelleyin
+  - [Matière renouvelable, "Bien gérée, la forêt se renouvelle. De la découpe à la fabrication, nous utilisons la matière avec efficacité et réduisons les chutes au minimum."]
+  - [Réemploi et recyclage, "Les tourets et palettes en bois se réutilisent de nombreuses fois. Nous œuvrons au recyclage du bois en fin de vie."]
+  - [Des arbres pour nos clients, "Chaque année, nous plantons des arbres au nom de nos clients, pour rendre à la nature le bois que nous utilisons."]
+  - [Des déchets à l’énergie, "Les déchets de bois de la production sont valorisés en granulés de bois pour le secteur de l’énergie."]
+  more: Découvrir notre démarche
+  planting_eyebrow: Responsabilité sociale
+  planting_h: Chaque année, des arbres au nom de nos clients.
   planting_p: "Chaque année, nous plantons de jeunes arbres au nom de nos clients. Chaque touret et chaque palette commence par un arbre de la forêt ; le remplacer fait partie de notre métier."
-  recycling_h: "Partenariat international de recyclage"
+  recycling_h: Partenariat international de recyclage
   recycling_p: "Nous menons un partenariat de recyclage lié à la France afin de valoriser les emballages en bois arrivés en fin de vie."
   labels:
-    partner: "Organisme partenaire"
-    trees_total: "Arbres plantés"
-    since: "Programme depuis"
-  img_alt: "Vue aérienne d’une forêt de pins dans la brume"
-  planting_alt: "Un jeune arbre fraîchement planté"
-
+    partner: Organisme partenaire
+    trees_total: Arbres plantés
+    since: Programme depuis
+  img_alt: Vue aérienne d’une forêt de pins dans la brume
+  planting_alt: Un jeune arbre fraîchement planté
 refs:
-  eyebrow: "Secteurs"
-  h: ["De la ligne de câblage à la carrière de marbre,", "les secteurs que nous servons."]
-  lead: "Des câbliers énergie et télécoms aux entreprises du marbre et aux exportateurs de machines, nous fabriquons l’emballage d’expédition de nombreux secteurs."
-  uses: "Produits utilisés"
+  eyebrow: Secteurs
+  h: ['De la ligne de câblage à la carrière de marbre,', les secteurs que nous servons.]
+  lead: "Des câbliers énergie et télécommunications aux entreprises du marbre et aux exportateurs de machines, nous fabriquons l’emballage d’expédition de nombreux secteurs."
+  uses: Produits utilisés
   sectors:
-    - key: enerji
-      name: "Câbliers énergie"
-      desc: "Tourets en bois de grand diamètre pour câbles moyenne et haute tension."
-      products: [makara]
-    - key: telekom
-      name: "Câbliers télécoms et fibre optique"
-      desc: "Tourets en bois et bobines en carton pour câbles de communication, de données et fibre."
-      products: [makara, karton]
-    - key: halat
-      name: "Fabricants de câbles et fils d’acier"
-      desc: "Tourets renforcés pour enroulements lourds ; bobines en carton pour fils légers."
-      products: [makara, karton]
-    - key: mermer
-      name: "Entreprises du marbre et de la pierre"
-      desc: "Caisses à marbre et caisses pour tranches et blocs."
-      products: [mermer, sandik]
-    - key: makine
-      name: "Exportateurs de machines et d’équipements"
-      desc: "Caisses d’exportation et palettes sur mesure pour charges lourdes."
-      products: [sandik, palet]
-    - key: lojistik
-      name: "Logistique et entreposage"
-      desc: "Palettes EUR et sur mesure pour stockage et logistique interne."
-      products: [palet]
-
+  - key: enerji
+    name: Câbliers énergie
+    desc: "Tourets de câble en bois jusqu’à 320 cm pour câbles moyenne et haute tension ; pièces de tourets en kit."
+    products: [makara, kit]
+  - key: telekom
+    name: Câbliers télécommunications et fibre optique
+    desc: "Tourets en bois et en contreplaqué pour câbles de communication, de données et à fibre."
+    products: [makara, kontrplak]
+  - key: halat
+    name: Fabricants de câbles d’acier et de fils
+    desc: "Tourets en bois renforcés pour enroulements lourds ; tourets en contreplaqué pour fils et enroulements légers."
+    products: [makara, kontrplak]
+  - key: mermer
+    name: Entreprises du marbre et de la pierre naturelle
+    desc: "Caisses à marbre et caisses pour l’expédition de tranches et de blocs."
+    products: [mermer, sandik]
+  - key: makine
+    name: Exportateurs de machines et d’équipements
+    desc: "Caisses d’exportation sur mesure pour charges lourdes ; caisses pliables pour expéditions réutilisables."
+    products: [sandik, katlanabilir]
+  - key: lojistik
+    name: Logistique et entreposage
+    desc: "Caisses-palettes pliables en bois pour le stockage et la logistique interne."
+    products: [katlanabilir]
 rfq:
-  eyebrow: "Demander un devis"
-  h: "Trouvons ensemble le bon produit pour votre projet."
+  eyebrow: Demander un devis
+  h: Trouvons ensemble le bon produit pour votre projet.
   p: "Indiquez le groupe de produits, les dimensions et la quantité. Joignez un plan si vous en avez un ; nous répondrons avec prix et délai."
-  short_h: "Demandez un devis."
+  short_h: Demandez un devis.
   short_p: "Indiquez dimensions, quantité et lieu de livraison ; nous répondrons avec prix et délai."
-  short_cta: "Aller au formulaire"
-  product_cta: "Demander un devis pour ce produit"
-  group_legend: "Groupe de produits"
+  short_cta: Aller au formulaire
+  product_cta: Demander un devis pour ce produit
+  group_legend: Groupe de produits
   groups:
-    makara: "Touret en bois"
-    karton: "Bobine en carton"
-    palet: "Palette"
-    sandik: "Caisse"
-    mermer: "Caisse à marbre"
-    diger: "Sur mesure"
-  f_size: "Dimension ou besoin technique"
-  f_size_ph: "Ø 1600 mm · Câble d’énergie"
-  f_qty: "Quantité"
-  f_qty_ph: "250"
-  f_name: "Nom et prénom"
-  f_company: "Société"
-  f_phone: "Téléphone"
-  f_email: "E-mail"
-  f_note: "Remarques"
-  f_note_ph: "Lieu de livraison, délai, application"
-  f_file: "Joindre un plan"
-  f_file_hint: "PDF, DWG, DXF ou image · facultatif"
-  privacy: "Vos données servent uniquement à préparer votre devis."
-  submit: "Envoyer la demande"
-  facility: "Site de production"
-
+    makara: Touret en bois
+    kontrplak: Touret en contreplaqué
+    kit: Kit
+    katlanabilir: Caisse-palette pliable
+    sandik: Caisse
+    mermer: Caisse à marbre
+    diger: Sur mesure
+  f_size: Dimension ou besoin technique
+  f_size_ph: Ø 160 cm · Câble d’énergie
+  f_qty: Quantité
+  f_qty_ph: '250'
+  f_name: Nom et prénom
+  f_company: Société
+  f_phone: Téléphone
+  f_email: E-mail
+  f_note: Remarques
+  f_note_ph: Lieu de livraison, délai, application
+  f_file: Joindre un plan
+  f_file_hint: PDF, DWG, DXF ou image · facultatif
+  privacy: Vos données servent uniquement à préparer votre devis.
+  submit: Envoyer la demande
+  facility: Usines de production
 footer:
-  products: "Produits"
-  company: "Entreprise"
-  facility: "Usine"
+  products: Produits
+  company: Entreprise
+  facility: Usines
   design: "Design : TCM Global"
-
-related: ["Autres produits", "De la même chaîne de production."]
-tech_eyebrow: "Caractéristiques"
-detail_eyebrow: "Détails"
-faq_eyebrow: "Questions fréquentes"
-products_page_h: "Produits"
-products_page_lead: "Des solutions en bois et en carton pour chaque étape de l’expédition, du touret de câble à la caisse à marbre. Nos tourets en bois vont de 55 cm à 3,20 m de diamètre de joue."
-
+related: [Autres produits, De la même chaîne de production.]
+tech_eyebrow: Caractéristiques
+detail_eyebrow: Détails
+faq_eyebrow: Questions fréquentes
+products_page_h: Produits
+products_page_lead: "Des solutions en bois pour chaque étape de l’expédition, du touret de câble à la caisse à marbre. Nos tourets de câble en bois vont de 55 cm à 320 cm de diamètre de joue."
 js:
-  note_std: "<b>Compatible conteneur standard.</b> Peut être chargé dans un conteneur dont la porte mesure environ 2,28 m."
-  note_hc: "<b>Conteneur high-cube possible.</b> Dépasse la porte standard ; envisagez un conteneur à porte de ≈ 2,58 m."
+  note_std: "<b>Compatible conteneur standard.</b> Peut être chargé dans un conteneur dont la porte mesure environ 228 cm."
+  note_hc: "<b>Conteneur high-cube possible.</b> Dépasse la porte standard ; envisagez un conteneur à porte de ≈ 258 cm."
   note_open: "<b>Transport open-top ou flat-rack.</b> Les tourets de ce diamètre passent rarement par une porte de conteneur fermé."
-  person: "1,75 m"
-  door_hc: "Porte conteneur high-cube ≈ 2,58 m"
-  door_std: "Porte standard ≈ 2,28 m"
-  err_required: "Renseignez nom, société, téléphone et e-mail."
-  err_email: "Vérifiez l’adresse e-mail, par exemple nom@societe.com"
+  person: 175 cm
+  door_hc: Porte conteneur high-cube ≈ 258 cm
+  door_std: Porte standard ≈ 228 cm
+  err_required: Renseignez nom, société, téléphone et e-mail.
+  err_email: Vérifiez l’adresse e-mail, par exemple nom@societe.com
   preview: "Aperçu : le formulaire n’est pas encore relié à un destinataire."
   sent: "Votre demande a été envoyée. Notre équipe vous répondra rapidement."
   failed: "La demande n’a pas pu être envoyée. Vérifiez votre connexion et réessayez."
-  file_hint: "PDF, DWG, DXF ou image · facultatif"
+  file_hint: PDF, DWG, DXF ou image · facultatif
+standards:
+  label: Norme
+  eyebrow: Normes et certificats
+  ispm15: Fourni selon la norme NIMP 15 (ISPM 15)
+  ispm15_long: "Nos produits sont fournis selon la NIMP 15 (ISPM 15), la norme internationale applicable aux emballages en bois dans le commerce international."
+  fsc_long: "Nous travaillons avec une chaîne d’approvisionnement en bois certifiée FSC."

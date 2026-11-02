@@ -75,7 +75,7 @@
 {%- endmacro %}
 
 {% macro pillars() -%}
-<ol class="pillars">
+<ol class="pillars{% if L.sustain.pillars|length == 4 %} pillars-4{% endif %}">
   {% for h, p in L.sustain.pillars %}<li><i class="num">{{ '%02d' % loop.index }}</i><h3>{{ h }}</h3><p>{{ p }}</p></li>{% endfor %}
 </ol>
 {%- endmacro %}

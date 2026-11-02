@@ -15,9 +15,11 @@ languages: [tr, en, fr, ar, es]
 # Boşken form önizleme mesajı gösterir.
 form_endpoint: ""
 
-# Makara üretim ölçüsü (milimetre)
-reel_min_mm: 550
-reel_max_mm: 3200
+# Makara üretim ölçüsü (santimetre)
+reel_min_cm: 55
+reel_max_cm: 320
+# Ölçü aracındaki ara görünüş üst sınırı (standart konteyner kapısı ≈ 228 cm)
+reel_mid_cm: 228
 
 # ---------------------------------------------------------------
 # Şirket bilgileri. Boş bırakılan alan sitede görünmez.
@@ -29,14 +31,24 @@ company:
   reels_year: ""         # yıllık makara adedi, örn. "40.000"
   employees: ""          # örn. "60"
   phone: ""
-  email: ""
+  email: "info@standartentegre.com"
   address: ""
   city: "Gebze, Kocaeli"
+  # Üretim tesisleri (sitede listelenir)
+  facilities: ["Gebze, Kocaeli", "Denizli"]
   heritage_year: "1963"  # üretim geçmişinin başladığı yıl
   # Belgeler: her biri için kısa ad ve (varsa) görsel yolu
   certificates: []
-  #  - name: "ISPM-15"
   #  - name: "ISO 9001:2015"
+
+# ---------------------------------------------------------------
+# Standartlar ve belgeler.
+# Kapsamı ve kullanım izni şirket belgeleriyle teyit edilince "true" yapın;
+# metinler sitede (ürün sayfaları, Kurumsal) otomatik görünür.
+# ---------------------------------------------------------------
+standards:
+  ispm15: false   # ürünlerin ISPM 15 kapsamında tedarik edildiği bilgisi
+  fsc: false      # FSC belgesi (geçerlilik ve logo kullanım izni teyidi sonrası)
 
 # ---------------------------------------------------------------
 # Ürünler: sıra, kategori ve görsel. Metinler dil dosyalarında.
@@ -47,12 +59,15 @@ products:
     image: assets/img/render-makara.webp
     detail_image: assets/img/render-makara-parca.webp
     detail_wide: true
-  - key: karton
+  - key: kontrplak
     category: makaralar
-    image: assets/img/render-karton.webp
-  - key: palet
+    image: assets/img/render-kontrplak.webp
+  - key: kit
+    category: makaralar
+    image: assets/img/render-kit.webp
+  - key: katlanabilir
     category: ambalaj
-    image: assets/img/render-palet.webp
+    image: assets/img/render-katlanabilir.webp
   - key: sandik
     category: ambalaj
     image: assets/img/render-sandik.webp

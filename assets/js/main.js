@@ -46,30 +46,36 @@
   /* product preselect from ?urun= */
   try { var q = new URLSearchParams(location.search).get("urun"); if (q) pick(q); } catch (e) {}
 
-  /* ---------- scale tool ---------- */
+  /* ---------- scale tool (values in cm; drawing in mm × S) ---------- */
   var svg = $("scaleSvg"), range = $("dRange");
   if (svg && range) {
     var NS = "http://www.w3.org/2000/svg";
-    var S = 0.12, GY = 440, CX = 668;
+    var GY = 440, CX = 668;
+    var FULL = +range.dataset.full || 320, MID = +range.dataset.mid || 228;
+    var SCALE = { full: 0.12, mid: 0.155 }, S = SCALE.full;
     function el(tag, attrs, parent) {
       var n = document.createElementNS(NS, tag);
       for (var k in attrs) n.setAttribute(k, attrs[k]);
       (parent || svg).appendChild(n); return n;
     }
-    // ground
-    el("line", { x1: 0, y1: GY, x2: 900, y2: GY, class: "sv-ground" });
-    // person, 1.75 m
-    var ph = 1750 * S, px = 58, k = ph / 1750;
-    var person = el("g", { transform: "translate(" + px + "," + GY + ") scale(" + k + ")" });
-    el("circle", { cx: 0, cy: -1640, r: 108, class: "sv-person" }, person);
-    el("path", { class: "sv-person", d: "M-62,-1512 L-196,-1452 C-222,-1440 -232,-1410 -234,-1380 L-246,-980 L-190,-980 L-170,-1300 L-160,-900 L-128,0 L-36,0 L0,-800 L36,0 L128,0 L160,-900 L170,-1300 L190,-980 L246,-980 L234,-1380 C232,-1410 222,-1440 196,-1452 L62,-1512 Z" }, person);
-    el("text", { x: px, y: GY - ph - 26, "text-anchor": "middle", class: "sv-txt" }).textContent = T.person || "1,75 m";
-    // container doors
-    var dx = 150, dw = 2340 * S, dh = 2280 * S, hch = 2580 * S;
-    el("rect", { x: dx, y: GY - hch, width: dw, height: hch, class: "sv-door hc" });
-    el("rect", { x: dx, y: GY - dh, width: dw, height: dh, class: "sv-door" });
-    el("text", { x: dx + 10, y: GY - hch - 10, class: "sv-txt" }).textContent = T.door_hc || "";
-    el("text", { x: dx + 10, y: GY - dh + 20, class: "sv-txt" }).textContent = T.door_std || "";
+    var bg = el("g", {});
+    function drawStatic() {
+      while (bg.firstChild) bg.removeChild(bg.firstChild);
+      el("line", { x1: 0, y1: GY, x2: 900, y2: GY, class: "sv-ground" }, bg);
+      // person, 175 cm
+      var ph = 1750 * S, px = 58, k = ph / 1750;
+      var person = el("g", { transform: "translate(" + px + "," + GY + ") scale(" + k + ")" }, bg);
+      el("circle", { cx: 0, cy: -1640, r: 108, class: "sv-person" }, person);
+      el("path", { class: "sv-person", d: "M-62,-1512 L-196,-1452 C-222,-1440 -232,-1410 -234,-1380 L-246,-980 L-190,-980 L-170,-1300 L-160,-900 L-128,0 L-36,0 L0,-800 L36,0 L128,0 L160,-900 L170,-1300 L190,-980 L246,-980 L234,-1380 C232,-1410 222,-1440 196,-1452 L62,-1512 Z" }, person);
+      el("text", { x: px, y: GY - ph - 26, "text-anchor": "middle", class: "sv-txt" }, bg).textContent = T.person || "175 cm";
+      // container doors
+      var dx = 150, dw = 2340 * S, dh = 2280 * S, hch = 2580 * S;
+      el("rect", { x: dx, y: GY - hch, width: dw, height: hch, class: "sv-door hc" }, bg);
+      el("rect", { x: dx, y: GY - dh, width: dw, height: dh, class: "sv-door" }, bg);
+      el("text", { x: dx + 10, y: GY - hch - 10, class: "sv-txt" }, bg).textContent = T.door_hc || "";
+      el("text", { x: dx + 10, y: GY - dh + 20, class: "sv-txt" }, bg).textContent = T.door_std || "";
+    }
+    drawStatic();
 
     // reel face, unit radius 100
     var reel = el("g", { class: "reelg" });
@@ -88,12 +94,12 @@
     var dl = el("line", { class: "sv-dim" }, dim), dt = el("line", { class: "sv-dim" }, dim), db = el("line", { class: "sv-dim" }, dim);
     var dtx = el("text", { class: "sv-txt strong", "text-anchor": "start" }, dim);
 
-    var out = $("dOut"), note = $("dNote");
+    var out = $("dOut"), note = $("dNote"), maxLbl = $("dMax");
     function fmt(n) { try { return n.toLocaleString(LOC); } catch (e) { return String(n); } }
     function update() {
-      var D = +range.value, R = D * S / 2;
+      var cm = +range.value, D = cm * 10, R = D * S / 2;
       var mn = +range.min, mx = +range.max;
-      range.style.setProperty("--fill", ((D - mn) / (mx - mn) * 100) + "%");
+      range.style.setProperty("--fill", ((cm - mn) / (mx - mn) * 100) + "%");
       reel.style.transform = "translate(" + CX + "px," + (GY - R) + "px) scale(" + (R / 100) + ")";
       var x = CX + R + 20;
       dl.setAttribute("x1", x); dl.setAttribute("x2", x); dl.setAttribute("y1", GY - 2 * R); dl.setAttribute("y2", GY);
@@ -102,19 +108,31 @@
       dtx.setAttribute("x", Math.min(x + 10, 846)); dtx.setAttribute("y", GY - 2 * R - 12);
       dtx.setAttribute("text-anchor", x + 10 > 846 ? "end" : "start");
       if (x + 10 > 846) dtx.setAttribute("x", x - 8);
-      dtx.textContent = "Ø " + fmt(D);
-      out.innerHTML = fmt(D) + "<small>mm</small>";
-      if (D <= 2200) note.innerHTML = T.note_std || "";
-      else if (D <= 2500) note.innerHTML = T.note_hc || "";
+      dtx.textContent = "Ø " + fmt(cm) + " cm";
+      out.innerHTML = fmt(cm) + "<small>cm</small>";
+      if (cm <= 220) note.innerHTML = T.note_std || "";
+      else if (cm <= 250) note.innerHTML = T.note_hc || "";
       else note.innerHTML = T.note_open || "";
     }
+    // view: full range (to 320 cm) or the closer intermediate view (to 228 cm)
+    [].forEach.call(document.querySelectorAll('input[name="gorunum"]'), function (r) {
+      r.addEventListener("change", function () {
+        var mid = r.value === "mid" && r.checked;
+        S = mid ? SCALE.mid : SCALE.full;
+        range.max = mid ? MID : FULL;
+        if (+range.value > +range.max) range.value = range.max;
+        if (maxLbl) maxLbl.textContent = range.max + " cm";
+        reel.style.transition = "none"; drawStatic(); update();
+        requestAnimationFrame(function () { reel.style.transition = ""; });
+      });
+    });
     range.addEventListener("input", update); update();
 
     var dq = $("dQuote");
     if (dq) dq.addEventListener("click", function (e) {
       e.preventDefault();
       var c = document.querySelector('input[name="kablo"]:checked');
-      var f = $("f-olcu"); if (f) f.value = "Ø " + fmt(+range.value) + " mm · " + (c ? c.value : "");
+      var f = $("f-olcu"); if (f) f.value = "Ø " + fmt(+range.value) + " cm · " + (c ? c.value : "");
       pick("makara"); go("teklif");
     });
   }

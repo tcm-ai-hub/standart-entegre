@@ -545,3 +545,187 @@ export function concreteFloor(size = 30, seed = 41) {
   m.rotation.x = -Math.PI / 2; m.receiveShadow = true;
   return m;
 }
+
+// ---------------------------------------------------------------------------
+// v5 products: plywood reel, collapsible crate (pallet collars), reel kit pack
+// ---------------------------------------------------------------------------
+// Birch plywood face: pale, low-contrast grain.
+export function plywoodTexture(seed = 6, base = [214, 186, 146]) {
+  const r = rng(seed);
+  return canvasTex(512, (g, s) => {
+    g.fillStyle = `rgb(${base})`; g.fillRect(0, 0, s, s);
+    for (let i = 0; i < 10; i++) {
+      g.fillStyle = `rgba(${r() < 0.5 ? "255,240,214" : "120,82,44"},${0.03 + r() * 0.05})`;
+      g.fillRect(0, r() * s, s, 20 + r() * 70);
+    }
+    for (let i = 0; i < 160; i++) {
+      const y = r() * s, wob = 1 + r() * 4, f = 0.004 + r() * 0.01, ph = r() * 6.28;
+      g.strokeStyle = `rgba(110,74,38,${0.04 + r() * 0.1})`; g.lineWidth = 0.5 + r();
+      g.beginPath();
+      for (let x = -4; x <= s + 4; x += 8) { const yy = y + Math.sin(x * f + ph) * wob; x === -4 ? g.moveTo(x, yy) : g.lineTo(x, yy); }
+      g.stroke();
+    }
+  });
+}
+// Plywood edge: alternating plies across the thickness (texture v).
+export function plyEdgeTexture(plies = 9) {
+  return canvasTex(256, (g, s) => {
+    const h = s / plies;
+    for (let i = 0; i < plies; i++) {
+      g.fillStyle = i % 2 ? "rgb(160,118,72)" : "rgb(212,182,138)";
+      g.fillRect(0, i * h, s, h);
+      g.fillStyle = "rgba(60,36,14,.35)"; g.fillRect(0, i * h, s, 1.5);
+    }
+  });
+}
+
+export function buildPlywoodReel(opts = {}) {
+  const { D = 0.9, drum = 0.42, traverse = 0.52, t = 0.024, seed = 6, bolts = 4 } = opts;
+  const R = D / 2, rd = drum / 2;
+  const face = new THREE.MeshStandardMaterial({ map: plywoodTexture(seed), roughness: 0.8 });
+  const edgeTex = plyEdgeTexture(); edgeTex.repeat.set(24, 1 / t);
+  const edge = new THREE.MeshStandardMaterial({ map: edgeTex, roughness: 0.9 });
+  const g = new THREE.Group();
+  const shape = new THREE.Shape(); shape.absarc(0, 0, R, 0, Math.PI * 2, false);
+  const hole = new THREE.Path(); hole.absarc(0, 0, 0.042, 0, Math.PI * 2, true); shape.holes.push(hole);
+  for (const s of [-1, 1]) {
+    const geo = new THREE.ExtrudeGeometry(shape, { depth: t, bevelEnabled: false, curveSegments: 96 });
+    const m = new THREE.Mesh(geo, [face, edge]);
+    m.position.z = s > 0 ? traverse / 2 : -traverse / 2 - t;
+    m.castShadow = m.receiveShadow = true; g.add(m);
+    const zOut = s > 0 ? traverse / 2 + t : -traverse / 2 - t;
+    // steel bush around the arbor hole
+    const bush = new THREE.Mesh(new THREE.TorusGeometry(0.056, 0.012, 12, 40), steel());
+    bush.position.z = zOut; g.add(bush);
+    for (let i = 0; i < bolts; i++) {
+      const a = (i / bolts) * Math.PI * 2 + Math.PI / 4, rr = rd * 0.7;
+      const w = new THREE.Mesh(new THREE.CylinderGeometry(0.026, 0.026, 0.004, 20), steel());
+      w.rotation.x = Math.PI / 2; w.position.set(Math.cos(a) * rr, Math.sin(a) * rr, zOut + s * 0.002);
+      const n = new THREE.Mesh(new THREE.CylinderGeometry(0.017, 0.017, 0.016, 6), steelDark());
+      n.rotation.x = Math.PI / 2; n.position.set(Math.cos(a) * rr, Math.sin(a) * rr, zOut + s * 0.011);
+      n.castShadow = true; g.add(w, n);
+    }
+  }
+  // drum: plywood barrel
+  const drumTex = plywoodTexture(seed + 3, [200, 166, 120]); drumTex.repeat.set(3, 1);
+  const tube = new THREE.Mesh(new THREE.CylinderGeometry(rd, rd, traverse, 72, 1, true), new THREE.MeshStandardMaterial({ map: drumTex, roughness: 0.85, side: THREE.DoubleSide }));
+  tube.rotation.x = Math.PI / 2; tube.castShadow = tube.receiveShadow = true; g.add(tube);
+  const core = new THREE.Mesh(new THREE.CylinderGeometry(0.042, 0.042, traverse + 2 * t + 0.01, 24), new THREE.MeshBasicMaterial({ color: 0x0d0905 }));
+  core.rotation.x = Math.PI / 2; g.add(core);
+  g.userData = { R, halfW: traverse / 2 + t };
+  return g;
+}
+
+// One pallet collar: four boards hinged at the corners. Origin at bottom centre.
+function collar(L, W, H, bt, mats, r) {
+  const g = new THREE.Group();
+  const add = (w, h, d, x, y, z) => {
+    const m = new THREE.Mesh(woodBox(w, h, d), pick(mats, r));
+    m.position.set(x, y, z); m.castShadow = m.receiveShadow = true; g.add(m); return m;
+  };
+  add(L, H, bt, 0, H / 2, W / 2 - bt / 2);
+  add(L, H, bt, 0, H / 2, -(W / 2 - bt / 2));
+  add(bt, H, W - 2 * bt, L / 2 - bt / 2, H / 2, 0);
+  add(bt, H, W - 2 * bt, -(L / 2 - bt / 2), H / 2, 0);
+  // corner hinges: plate on each face meeting at the corner, plus a knuckle
+  const hm = steel(), km = steelDark();
+  for (const sx of [1, -1]) for (const sz of [1, -1]) for (const y of [H * 0.22, H * 0.78]) {
+    const a = new THREE.Mesh(new THREE.BoxGeometry(0.07, 0.045, 0.004), hm);
+    a.position.set(sx * (L / 2 - 0.035), y, sz * (W / 2 + 0.002));
+    const b = new THREE.Mesh(new THREE.BoxGeometry(0.004, 0.045, 0.07), hm);
+    b.position.set(sx * (L / 2 + 0.002), y, sz * (W / 2 - 0.035));
+    const k = new THREE.Mesh(new THREE.CylinderGeometry(0.006, 0.006, 0.05, 10), km);
+    k.position.set(sx * (L / 2 + 0.003), y, sz * (W / 2 + 0.003));
+    a.castShadow = b.castShadow = true;
+    g.add(a, b, k);
+  }
+  return g;
+}
+
+// Collapsible crate: pallet + stacked collars, and beside it the same collars folded flat.
+export function buildCollapsibleCrate(seed = 14) {
+  const r = rng(seed);
+  const mats = woodMaterials(6, seed + 70);
+  const L = 1.2, W = 0.8, H = 0.2, bt = 0.02;
+  const scene = new THREE.Group();
+  // assembled
+  const a = new THREE.Group();
+  const p1 = buildPallet(seed + 1); a.add(p1);
+  const ph = p1.userData.size.y;
+  for (let i = 0; i < 3; i++) { const c = collar(L, W, H, bt, mats, r); c.position.y = ph + i * (H + 0.002); a.add(c); }
+  // folded: two columns of flat collars on a second pallet
+  const f = new THREE.Group();
+  const p2 = buildPallet(seed + 2); f.add(p2);
+  const add = (w, h, d, x, y, z) => {
+    const m = new THREE.Mesh(woodBox(w, h, d), pick(mats, r));
+    m.position.set(x, y, z); m.castShadow = m.receiveShadow = true; f.add(m); return m;
+  };
+  const layers = 9, lt = 2 * bt + 0.004;
+  for (let i = 0; i < layers; i++) for (const zc of [-W / 4, W / 4]) {
+    const y = ph + i * lt;
+    add(L, bt, H * 0.98, 0, y + bt / 2, zc);
+    add(L - 0.02, bt, H * 0.98, 0, y + bt * 1.5 + 0.002, zc);
+    for (const sx of [1, -1]) {
+      const k = new THREE.Mesh(new THREE.BoxGeometry(0.012, lt * 0.9, 0.05), steelDark());
+      k.position.set(sx * (L / 2 + 0.004), y + lt / 2, zc + 0.05); f.add(k);
+    }
+  }
+  a.position.set(-0.78, 0, -0.1);
+  f.position.set(0.78, 0, 0.25); f.rotation.y = -0.18;
+  scene.add(a, f);
+  scene.userData.size = new THREE.Vector3(3.0, ph + 3 * H, 1.6);
+  return scene;
+}
+
+// Reel kit: flanges stacked flat and a strapped bundle of drum staves on one pallet.
+export function buildReelKit(seed = 18) {
+  const r = rng(seed);
+  const mats = woodMaterials(7, seed + 30);
+  const g = new THREE.Group();
+  const p = buildPallet(seed + 3); g.add(p);
+  const ph = p.userData.size.y;
+  const R = 0.38, t = 0.022, n = 6;
+  const disc = new THREE.Group();
+  for (let i = 0; i < n; i++) {
+    const fl = new THREE.Group();
+    const inner = flangeLayer(R, t, 0.11, 0.004, mats, r); inner.rotation.z = Math.PI / 2;
+    const outer = flangeLayer(R, t, 0.11, 0.004, mats, r); outer.position.z = t;
+    fl.add(inner, outer);
+    const hole = new THREE.Mesh(new THREE.CylinderGeometry(0.045, 0.045, 2 * t + 0.004, 32), new THREE.MeshBasicMaterial({ color: 0x0b0906 }));
+    hole.rotation.x = Math.PI / 2; hole.position.z = t; fl.add(hole);
+    fl.rotation.x = -Math.PI / 2; fl.rotation.z = r() * 0.4;
+    fl.position.y = ph + i * (2 * t + 0.003);
+    disc.add(fl);
+  }
+  disc.position.set(-0.19, 0, 0);
+  g.add(disc);
+  // stave bundle along Z
+  const sw = 0.075, st = 0.026, sl = 0.74;
+  const bundle = new THREE.Group();
+  for (let row = 0; row < 5; row++) for (let col = 0; col < 4; col++) {
+    const m = new THREE.Mesh(woodBox(sw, st, sl), pick(mats, r));
+    m.position.set(col * (sw + 0.003) - 1.5 * (sw + 0.003), ph + st / 2 + row * (st + 0.002), (r() - 0.5) * 0.02);
+    m.castShadow = m.receiveShadow = true; bundle.add(m);
+  }
+  const bh = 5 * (st + 0.002), bw = 4 * (sw + 0.003);
+  for (const z of [-0.24, 0.24]) {
+    const top = new THREE.Mesh(new THREE.BoxGeometry(bw + 0.01, 0.003, 0.02), steel()); top.position.set(0, ph + bh + 0.002, z);
+    const s1 = new THREE.Mesh(new THREE.BoxGeometry(0.003, bh, 0.02), steel()); s1.position.set(bw / 2 + 0.004, ph + bh / 2, z);
+    const s2 = s1.clone(); s2.position.x = -bw / 2 - 0.004;
+    bundle.add(top, s1, s2);
+  }
+  bundle.position.set(0.41, 0, 0);
+  g.add(bundle);
+  // straps over the flange stack
+  const sh = n * (2 * t + 0.003);
+  for (const ang of [0, Math.PI / 2]) {
+    const band = new THREE.Group();
+    const top = new THREE.Mesh(new THREE.BoxGeometry(2 * R + 0.01, 0.003, 0.02), steel()); top.position.y = ph + sh + 0.002;
+    const s1 = new THREE.Mesh(new THREE.BoxGeometry(0.003, sh, 0.02), steel()); s1.position.set(R + 0.004, ph + sh / 2, 0);
+    const s2 = s1.clone(); s2.position.x = -R - 0.004;
+    band.add(top, s1, s2); band.rotation.y = ang; band.position.x = -0.19;
+    g.add(band);
+  }
+  g.userData.size = new THREE.Vector3(1.2, ph + sh, 0.8);
+  return g;
+}
