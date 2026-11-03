@@ -28,7 +28,7 @@
 
 <header class="hdr{% if page.kind not in ['home', 'about'] %} is-solid{% endif %}" id="hdr">
   <div class="hdr-in px">
-    <a class="logo" href="{{ link(home_path) }}"><img class="logo-mark" src="{{ root }}assets/img/standart-entegre-mark.svg" width="42" height="20" alt="">{{ S.brand }}</a>
+    <a class="logo" href="{{ link(home_path) }}"><img class="logo-mark" src="{{ root }}assets/img/standart-entegre-mark.png" width="42" height="20" alt="">{{ S.brand }}</a>
     <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" data-open="{{ L.nav.menu }}" data-close="{{ L.nav.close }}">{{ L.nav.menu }}</button>
     <nav class="nav" id="nav" aria-label="{{ L.nav.menu }}">
       <a href="{{ link(products_path) }}"{% if page.kind in ['products','product'] %} aria-current="page"{% endif %}>{{ L.nav.products }}</a>
