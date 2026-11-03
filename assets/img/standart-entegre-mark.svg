@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 280">
+  <defs>
+    <filter id="remove-white" color-interpolation-filters="sRGB">
+      <feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -1 -1 -1 0 3"/>
+    </filter>
+  </defs>
+  <image href="standart-entegre-logo.png" x="-468" y="-360" width="1536" height="1024" filter="url(#remove-white)"/>
+</svg>
+
