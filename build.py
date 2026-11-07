@@ -49,6 +49,30 @@ if OUT.exists():
     shutil.rmtree(OUT)
 OUT.mkdir()
 shutil.copytree(ROOT / "assets", OUT / "assets")
+
+# Favicon: şirket logosundan (assets/img/standart-entegre-mark.png) üretilir.
+def make_icons():
+    try:
+        from PIL import Image, ImageDraw
+    except ImportError:
+        print("  ! Pillow yok, favicon üretilmedi (pip install pillow)")
+        return
+    mark = Image.open(ROOT / "assets/img/standart-entegre-mark.png").convert("RGBA")
+    mark = mark.crop(mark.getbbox())
+    def icon(size, pad, radius):
+        bg = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+        ImageDraw.Draw(bg).rounded_rectangle((0, 0, size - 1, size - 1), radius=int(size * radius), fill=(255, 255, 255, 255))
+        w = int(size * (1 - 2 * pad)); h = round(w * mark.height / mark.width)
+        m = mark.resize((w, h), Image.LANCZOS)
+        bg.alpha_composite(m, ((size - w) // 2, (size - h) // 2))
+        return bg
+    img = OUT / "assets/img"
+    icon(64, .1, .2).save(img / "favicon-64.png")
+    icon(32, .04, .2).save(img / "favicon-32.png")
+    icon(48, .04, .2).save(OUT / "favicon.ico", sizes=[(16, 16), (32, 32), (48, 48)])
+    icon(180, .14, 0).convert("RGB").save(img / "apple-touch-icon.png")
+    icon(512, .14, .2).save(img / "icon-512.png")
+make_icons()
 (OUT / ".nojekyll").write_text("")
 
 # ---- images: "src" may be a local path or an https URL --------------------
