@@ -415,6 +415,7 @@ js:
   preview: "Vista previa: el formulario aún no está conectado a un destinatario."
   sent: "Su solicitud se ha enviado. Nuestro equipo le responderá en breve."
   failed: "No se pudo enviar la solicitud. Revise su conexión e inténtelo de nuevo."
+  sending: "Enviando…"
   file_hint: PDF, DWG, DXF o imagen · opcional
 standards:
   label: Norma

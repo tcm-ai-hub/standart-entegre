@@ -415,6 +415,7 @@ js:
   preview: "Aperçu : le formulaire n’est pas encore relié à un destinataire."
   sent: "Votre demande a été envoyée. Notre équipe vous répondra rapidement."
   failed: "La demande n’a pas pu être envoyée. Vérifiez votre connexion et réessayez."
+  sending: "Envoi en cours…"
   file_hint: PDF, DWG, DXF ou image · facultatif
 standards:
   label: Norme

@@ -414,6 +414,7 @@ js:
   preview: "Preview: the form is not connected to a recipient yet."
   sent: "Your request has been sent. Our team will get back to you shortly."
   failed: "The request could not be sent. Check your connection and try again."
+  sending: "Sending…"
   file_hint: PDF, DWG, DXF or image · optional
 standards:
   label: Standard

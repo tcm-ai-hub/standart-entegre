@@ -415,6 +415,7 @@ js:
   preview: "Önizleme: form henüz bir alıcıya bağlı değil."
   sent: Talebiniz iletildi. Ekibimiz en kısa sürede dönüş yapacak.
   failed: "Talep gönderilemedi. Bağlantınızı kontrol edip tekrar deneyin."
+  sending: "Gönderiliyor…"
   file_hint: PDF, DWG, DXF veya görsel · isteğe bağlı
 standards:
   label: Standart
