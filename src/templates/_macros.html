@@ -24,6 +24,10 @@
 
 {% macro rfq_form() -%}
 <form class="q" id="rfqForm" novalidate data-endpoint="{{ S.form_endpoint }}">
+  <input type="hidden" name="_subject" value="Yeni teklif talebi · standartentegre.com ({{ L.lang|upper }})">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
   <fieldset class="chips">
     <legend>{{ L.rfq.group_legend }}</legend>
     {% for k, v in L.rfq.groups.items() %}<label><input type="radio" name="urun_grubu" id="ug-{{ k }}" value="{{ v }}"{% if loop.first %} checked{% endif %}><span>{{ v }}</span></label>{% endfor %}

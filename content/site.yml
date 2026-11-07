@@ -4,16 +4,19 @@
 # ---------------------------------------------------------------
 
 # Sitenin yayın adresi. Domain alınınca burayı değiştirin (sonunda / olsun).
-base_url: "https://tcm-ai-hub.github.io/standart-entegre/"
+base_url: "https://standartentegre.com/"
 
 brand: "Standart Entegre"
+
+# Footer'daki "Tasarım: TCM Global" yazısının linki
+credit_url: "https://www.tcmglobal.com.tr"
 
 # İlk dil kök dizinde yayınlanır, diğerleri /en/, /fr/ ... altında.
 languages: [tr, en, fr, ar, es]
 
 # Teklif formunun gönderileceği adres (Formspree, Web3Forms veya n8n webhook).
 # Boşken form önizleme mesajı gösterir.
-form_endpoint: ""
+form_endpoint: "https://formsubmit.co/ajax/info@standartentegre.com"
 
 # Makara üretim ölçüsü (santimetre)
 reel_min_cm: 55

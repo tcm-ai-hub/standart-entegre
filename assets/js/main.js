@@ -152,7 +152,8 @@
     if (!FORM_ENDPOINT) { say(T.preview, false); return; }
     var btn = form.querySelector("button[type=submit]"); btn.disabled = true;
     fetch(FORM_ENDPOINT, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } })
-      .then(function (r) { if (!r.ok) throw 0; form.reset(); pick("makara"); say(T.sent, false); })
+      .then(function (r) { if (!r.ok) throw 0; return r.json().catch(function () { return {}; }); })
+      .then(function (j) { if (j && (j.success === false || j.success === "false")) throw 0; form.reset(); pick("makara"); say(T.sent, false); })
       .catch(function () { say(T.failed, true); })
       .finally(function () { btn.disabled = false; });
   });

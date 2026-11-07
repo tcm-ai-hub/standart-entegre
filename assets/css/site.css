@@ -292,6 +292,9 @@ form.q { display: grid; gap: 34px; }
 .ftr-base { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-block: 22px 36px; border-top: 1px solid var(--night-line); font-size: .84rem; }
 @media (max-width: 760px) { .ftr-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .ftr-grid > :first-child { grid-column: 1 / -1; } }
 
+.ftr-credit { color: inherit; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s; }
+.ftr-credit:hover, .ftr-credit:focus-visible { border-bottom-color: currentColor; }
+
 /* mobile quote pill */
 .qpill { display: none; }
 @media (max-width: 760px) {

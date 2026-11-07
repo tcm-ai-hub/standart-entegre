@@ -61,7 +61,7 @@
       {% if S.company.phone %}<li dir="ltr">{{ S.company.phone }}</li>{% endif %}
     </ul></div>
   </div>
-  <div class="ftr-base px"><span>© <span id="yr">2026</span> {{ S.brand }}</span><span>{{ L.footer.design }}</span></div>
+  <div class="ftr-base px"><span>© <span id="yr">2026</span> {{ S.brand }}</span><a class="ftr-credit" href="{{ S.credit_url }}" target="_blank" rel="noopener">{{ L.footer.design }}</a></div>
 </footer>
 
 <a class="qpill{% if page.kind == 'home' %} in-hero{% endif %}" id="qpill" href="{{ link(home_path) }}{% if page.key %}?urun={{ page.key }}{% endif %}#teklif">{{ L.hero.cta_quote }} <i>{{ L.arrow }}</i></a>
