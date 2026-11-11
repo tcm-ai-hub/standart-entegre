@@ -33,7 +33,7 @@ company:
   lumber_m3_year: ""     # yıllık kereste, örn. "15.000"
   reels_year: ""         # yıllık makara adedi, örn. "40.000"
   employees: ""          # örn. "60"
-  phone: ""
+  phone: "+90 553 294 20 41"
   email: "info@standartentegre.com"
   address: ""
   city: "Gebze, Kocaeli"

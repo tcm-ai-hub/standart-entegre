@@ -133,7 +133,7 @@
       <div class="contact" id="iletisim">
         <b>{{ S.brand }}</b>
         <span>{{ L.rfq.facility }}: {{ S.company.facilities|join(' · ') }}</span>
-        {% if S.company.phone %}<span dir="ltr">{{ S.company.phone }}</span>{% endif %}
+        {% if S.company.phone %}<a href="tel:{{ S.company.phone|replace(' ', '') }}" dir="ltr">{{ S.company.phone }}</a>{% endif %}
         {% if S.company.email %}<span>{{ S.company.email }}</span>{% endif %}
       </div>
     </div>

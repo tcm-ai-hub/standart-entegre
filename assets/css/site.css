@@ -341,9 +341,11 @@ table.spec td.num { font-size: 1.05rem; }
 .nav .langs a { opacity: .5; }
 .nav .langs a[aria-current] { opacity: 1; }
 .ftr-brand { display: grid; gap: 20px; align-content: start; }
-.ftr-langs { flex-wrap: wrap; gap: 4px 14px; font-weight: 400; letter-spacing: 0; font-size: .9rem; }
-.ftr-langs a { padding: 0; opacity: .7; }
-.ftr-langs a[aria-current] { box-shadow: none; color: var(--night-ink); opacity: 1; }
+.ftr-contact { display: grid; gap: 12px; justify-items: start; }
+.ftr-langs { display: inline-flex; width: fit-content; margin-top: 8px; padding: 3px; gap: 2px; border: 1px solid var(--night-line); border-radius: 999px; font: 500 .74rem/1 var(--f-num); letter-spacing: .08em; }
+.ftr-langs a { display: grid; place-items: center; min-width: 40px; height: 30px; padding: 0 10px; border-radius: 999px; color: var(--night-muted); transition: color .2s, background .2s; }
+.ftr-langs a:hover { color: var(--night-ink); background: var(--night-2); }
+.ftr-langs a[aria-current] { color: var(--night); background: var(--night-ink); }
 @media (max-width: 1100px) { .nav { gap: 22px; } }
 @media (max-width: 860px) {
   .nav .langs { order: 10; padding: 18px 0 4px; gap: 6px; }
